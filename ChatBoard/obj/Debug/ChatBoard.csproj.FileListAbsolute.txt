@@ -52,3 +52,4 @@ E:\ChatBoard\ChatBoard\bin\Microsoft.AspNet.Identity.Owin.xml
 E:\ChatBoard\ChatBoard\bin\Microsoft.AspNet.Identity.EntityFramework.xml
 E:\ChatBoard\ChatBoard\obj\Debug\ChatBoard.dll
 E:\ChatBoard\ChatBoard\obj\Debug\ChatBoard.pdb
+E:\ChatBoard\ChatBoard\obj\Debug\ChatBoard.csprojResolveAssemblyReference.cache

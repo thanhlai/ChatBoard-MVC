@@ -54,9 +54,9 @@ namespace ChatBoard
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "773823972683893",
+               appSecret: "e5fadea9b1038f20310669a6e5bf46c2");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
