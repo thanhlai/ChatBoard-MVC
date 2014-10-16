@@ -22,3 +22,36 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*Home page style*/
+.inner-addon {
+    position: relative;
+}
+
+.right-inner-addon {
+    margin-top: 30px;
+    width: 100%;
+}
+.right-inner-addon input {
+    padding-right: 30px;    
+}
+.right-inner-addon i {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+.right-inner-addon .glyphicon {right: 0px;}
+.poopoo {
+    max-width: 100%;
+}
+
+.search-box {
+   background-image: url('logo.png');
+   background-size: 100% 100%;
+   width: auto;
+   height: 170px;
+}
+footer {
+    margin-top: 50px;
+    text-align: center;
+}
