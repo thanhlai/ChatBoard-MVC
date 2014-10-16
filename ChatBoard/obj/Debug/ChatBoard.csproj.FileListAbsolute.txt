@@ -50,6 +50,5 @@ E:\ChatBoard\ChatBoard\bin\EntityFramework.SqlServer.xml
 E:\ChatBoard\ChatBoard\bin\Microsoft.AspNet.Identity.Core.xml
 E:\ChatBoard\ChatBoard\bin\Microsoft.AspNet.Identity.Owin.xml
 E:\ChatBoard\ChatBoard\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-E:\ChatBoard\ChatBoard\obj\Debug\ChatBoard.csprojResolveAssemblyReference.cache
 E:\ChatBoard\ChatBoard\obj\Debug\ChatBoard.dll
 E:\ChatBoard\ChatBoard\obj\Debug\ChatBoard.pdb
