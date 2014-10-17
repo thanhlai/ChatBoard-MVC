@@ -12,5 +12,13 @@ namespace ChatBoard.Controllers
         {
             return View();
         }
+        /// <summary>
+        /// Anonymous Chat Board
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Chat()
+        {
+            return View();
+        }
     }
 }

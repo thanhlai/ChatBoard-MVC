@@ -6,14 +6,21 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\Thanh\Desktop\DeployChat</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\Thanh\Desktop\de</_PublishTargetUrl>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAV983D1EmOUmNwlYMKIgvxAAAAAACAAAAAAAQZgAAAAEAACAAAAB28agpN1gDiyqqbzfhLwei9eLwRJd9qxV3UrHFIPYJMQAAAAAOgAAAAAIAACAAAAApp16+9DnzwzmYjNHvVisxDv15tD3IVP/k8gz3C1aSEyAAAACYADjBXah+NHMQaZPIVttX1WA5lTo2jUMjcUgUywD8REAAAABSyd9TfMbUJwyL+0fIG5hKet2qSC5U5XSufuoNTJOu7JjAZFo3tK6EYf9rskSQb82X6mObXH9mwjxXNbLDthQO</EncryptedPassword>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="App_Data/aspnet-ChatBoard-20141016115311.mdf">
+      <publishTime>10/16/2014 20:58:20</publishTime>
+    </File>
+    <File Include="App_Data/aspnet-ChatBoard-20141016115311_log.ldf">
+      <publishTime>10/16/2014 20:58:20</publishTime>
+    </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>10/16/2014 11:54:34</publishTime>
     </File>
     <File Include="bin/ChatBoard.dll">
-      <publishTime>10/16/2014 13:11:01</publishTime>
+      <publishTime>10/16/2014 21:00:27</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/16/2014 11:52:18</publishTime>
