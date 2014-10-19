@@ -4,6 +4,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
+using Owin.Security.Providers.LinkedIn;
 using Owin;
 using ChatBoard.Models;
 
@@ -63,6 +64,10 @@ namespace ChatBoard
                 ClientId = "286805475836-jdi2t8cafuc5260kdrp6aintptu3plon.apps.googleusercontent.com",
                 ClientSecret = "Wf8-KWgLZRDDSsu7GPizA8Ve"
             });
+            app.UseLinkedInAuthentication(
+                clientId: "75t6xzdt5h2e67",
+                clientSecret: "kIoEsqnOJp6of2O9"
+                );
         }
     }
 }
