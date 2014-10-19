@@ -46,23 +46,23 @@ namespace ChatBoard
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
 
             // Uncomment the following lines to enable logging in with third party login providers
-            //app.UseMicrosoftAccountAuthentication(
-            //    clientId: "",
-            //    clientSecret: "");
+            app.UseMicrosoftAccountAuthentication(
+                clientId: "000000004C1263E6",
+                clientSecret: "goEFs7uQ--DuLiMcKjxs6SaUKcXQvFmF");
 
-            //app.UseTwitterAuthentication(
-            //   consumerKey: "",
-            //   consumerSecret: "");
+            app.UseTwitterAuthentication(
+               consumerKey: "YcMg0PdTZk8aMlGLiQL4xLidb",
+               consumerSecret: "s0pDIQV7GxB1W0S0F8SR5hsXP8hgX3oHymdDmYVzm5sumpTyRs");
 
             app.UseFacebookAuthentication(
                appId: "773823972683893",
                appSecret: "e5fadea9b1038f20310669a6e5bf46c2");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "286805475836-jdi2t8cafuc5260kdrp6aintptu3plon.apps.googleusercontent.com",
+                ClientSecret = "Wf8-KWgLZRDDSsu7GPizA8Ve"
+            });
         }
     }
 }

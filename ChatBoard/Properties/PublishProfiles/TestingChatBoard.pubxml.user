@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Users\Thanh\Desktop\de</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\Thanh\Desktop\deploy</_PublishTargetUrl>
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAV983D1EmOUmNwlYMKIgvxAAAAAACAAAAAAAQZgAAAAEAACAAAAB28agpN1gDiyqqbzfhLwei9eLwRJd9qxV3UrHFIPYJMQAAAAAOgAAAAAIAACAAAAApp16+9DnzwzmYjNHvVisxDv15tD3IVP/k8gz3C1aSEyAAAACYADjBXah+NHMQaZPIVttX1WA5lTo2jUMjcUgUywD8REAAAABSyd9TfMbUJwyL+0fIG5hKet2qSC5U5XSufuoNTJOu7JjAZFo3tK6EYf9rskSQb82X6mObXH9mwjxXNbLDthQO</EncryptedPassword>
   </PropertyGroup>
   <ItemGroup>
@@ -20,7 +20,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/16/2014 11:54:34</publishTime>
     </File>
     <File Include="bin/ChatBoard.dll">
-      <publishTime>10/16/2014 21:00:27</publishTime>
+      <publishTime>10/18/2014 16:53:53</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>10/16/2014 11:52:18</publishTime>
@@ -36,6 +36,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
       <publishTime>10/16/2014 11:52:47</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
+      <publishTime>10/17/2014 11:35:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.SignalR.SystemWeb.dll">
+      <publishTime>10/17/2014 11:35:24</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.dll">
       <publishTime>10/16/2014 11:54:43</publishTime>
@@ -116,10 +122,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/15/2014 13:32:56</publishTime>
     </File>
     <File Include="Content/logo.png">
-      <publishTime>10/16/2014 13:01:35</publishTime>
+      <publishTime>10/17/2014 11:29:58</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>10/16/2014 12:58:20</publishTime>
+      <publishTime>10/17/2014 17:14:53</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>10/16/2014 12:43:56</publishTime>
@@ -140,7 +146,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/16/2014 11:51:20</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>10/16/2014 11:58:49</publishTime>
+      <publishTime>10/17/2014 11:35:36</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>10/16/2014 11:55:27</publishTime>
@@ -156,6 +162,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Scripts/jquery-2.1.1.min.map">
       <publishTime>10/16/2014 11:55:11</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.1.2.js">
+      <publishTime>10/17/2014 11:35:29</publishTime>
+    </File>
+    <File Include="Scripts/jquery.signalR-2.1.2.min.js">
+      <publishTime>10/17/2014 11:35:29</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
       <publishTime>10/16/2014 11:55:44</publishTime>
@@ -185,7 +197,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/16/2014 11:58:40</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>10/16/2014 11:58:28</publishTime>
+      <publishTime>10/17/2014 16:02:39</publishTime>
     </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
       <publishTime>10/16/2014 11:52:10</publishTime>
@@ -232,8 +244,11 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Account/_SetPasswordPartial.cshtml">
       <publishTime>10/16/2014 11:52:10</publishTime>
     </File>
+    <File Include="Views/Home/Chat.cshtml">
+      <publishTime>10/17/2014 17:14:45</publishTime>
+    </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>10/16/2014 12:14:08</publishTime>
+      <publishTime>10/17/2014 11:54:24</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
       <publishTime>10/16/2014 11:52:11</publishTime>
@@ -266,13 +281,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/16/2014 11:52:12</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>10/16/2014 11:51:20</publishTime>
+      <publishTime>10/17/2014 12:01:37</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
       <publishTime>10/16/2014 11:51:20</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/16/2014 13:11:11</publishTime>
+      <publishTime>10/18/2014 16:54:01</publishTime>
     </File>
   </ItemGroup>
 </Project>
