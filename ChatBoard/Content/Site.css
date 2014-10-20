@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 65px;
     padding-bottom: 20px;
+    font-family:  "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -26,6 +27,20 @@ input,
 select,
 textarea {
     max-width: 600px;
+}
+/*HTML headings*/
+h2 {
+    font: 35px/50px "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+    color: #333;
+}
+h4 {
+    font: 20px/50px "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+    color: #333;
+}
+
+/*Login*/
+.red-heart, .red-heart a {
+    color: #E51400;
 }
 
 /*Home page style*/
@@ -56,6 +71,10 @@ textarea {
    width: auto;
    height: 120px;
 }
+.table-responsive {
+    margin-top: 40px;
+}
+/*footer*/
 footer {
     margin-top: 50px;
     text-align: center;
@@ -180,4 +199,13 @@ margin: 5px 0;
 white-space: nowrap;
 text-overflow: ellipsis;
 width: 100%;
+}
+
+/*Login form*/
+.margin-top-a-bit {
+    margin-top: 30px;
+}
+
+.center-this-line {
+    text-align: center;
 }

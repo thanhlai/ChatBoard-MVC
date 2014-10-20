@@ -10,7 +10,18 @@
         </div>
         <div class="col-md-8"></div>
         <div class="col-md-2">
-            <div class="btn btn-default action-dropdown">Invite</div>
+            <div class="btn-group action-dropdown">
+                <button type="button" class="btn btn-default btn-sm">Online</button>
+                <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Invite others</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Leave this board <i class="glyphicon glyphicon-log-out"></i></a></li>
+                </ul>
+            </div>
         </div>
     </header>
     <div class="row">
@@ -42,7 +53,7 @@
                     <div class="message">
                         <input type="text" id="message" />
                     </div>
-                    <input class="btn btn-primary" type="button" id="sendmessage" value="Send" />
+                    <input class="btn btn-default" type="button" id="sendmessage" value="Send" />
                 </div>
             </div>
         </div>
@@ -72,7 +83,7 @@
             // Create a function that the hub can call back to display messages.
             chat.client.addNewMessageToPage = function (name, message) {
                 // Add the message to the page.
-                $('#discussion').append('<li>'+ name +' : '+ message+ '</li>');
+                $('#discussion').append('<li>' + name + ' : ' + message + '</li>');
             };
             // Set initial focus to message input box.
             $('‪#‎message‬').focus();
@@ -81,8 +92,8 @@
                 $('#sendmessage').click(function () {
                     // Call the Send method on the hub.
                     if ($('#message').val().trim() != '') {
-                        chat.server.send($('#displayname').val(), $('#message').val());
-                        // Clear text box and reset focus for next comment. 
+                        chat.server.send('Thanh', $('#message').val());
+                        // Clear text box and reset focus for next comment.
                         $('#message').val('').focus();
                     }
                 });
