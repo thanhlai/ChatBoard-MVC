@@ -95,9 +95,6 @@ display: inline-block;
 
 .action-dropdown {
 display: inline-block;
-/*margin-top: 10px;*/
-/*background-color: #58D3F7;*/
-/*padding: 5px 10px;*/
 text-align: center;
 width: 100%;
 color: black;
@@ -200,6 +197,12 @@ white-space: nowrap;
 text-overflow: ellipsis;
 width: 100%;
 }
+
+ul
+{
+    list-style-type: none;
+}
+
 
 /*Login form*/
 .margin-top-a-bit {

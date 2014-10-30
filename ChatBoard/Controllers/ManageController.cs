@@ -346,7 +346,6 @@ namespace ChatBoard.Controllers
             }
             return false;
         }
-
         private bool HasPhoneNumber()
         {
             var user = UserManager.FindById(User.Identity.GetUserId());
