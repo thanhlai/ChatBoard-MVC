@@ -27,6 +27,11 @@ namespace ChatBoard
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
+            //Register View JS Bundle
+            bundles.Add(new ScriptBundle("~/bundles/register").Include(
+                "~/Scripts/jquery.validate*",
+                "~/Scripts/register.js"));
+
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862
             BundleTable.EnableOptimizations = true;
