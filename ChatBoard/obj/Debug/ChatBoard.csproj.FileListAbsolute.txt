@@ -495,9 +495,8 @@ C:\Development\ChatBoard-MVC\ChatBoard\bin\EntityFramework.SqlServer.xml
 C:\Development\ChatBoard-MVC\ChatBoard\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Development\ChatBoard-MVC\ChatBoard\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\Development\ChatBoard-MVC\ChatBoard\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Development\ChatBoard-MVC\ChatBoard\obj\Debug\ChatBoard.Migrations.InitialCreate.resources
-C:\Development\ChatBoard-MVC\ChatBoard\obj\Debug\ChatBoard.Migrations.initial.resources
-C:\Development\ChatBoard-MVC\ChatBoard\obj\Debug\ChatBoard.csproj.GenerateResource.Cache
 C:\Development\ChatBoard-MVC\ChatBoard\obj\Debug\ChatBoard.dll
 C:\Development\ChatBoard-MVC\ChatBoard\obj\Debug\ChatBoard.pdb
 C:\Development\ChatBoard-MVC\ChatBoard\obj\Debug\ChatBoard.csprojResolveAssemblyReference.cache
+C:\Development\ChatBoard-MVC\ChatBoard\bin\App_Data\ChatBoard.mdf
+C:\Development\ChatBoard-MVC\ChatBoard\bin\App_Data\ChatBoard_log.ldf

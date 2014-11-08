@@ -2,7 +2,13 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
-
+/*
+ * @author: Team Virus
+ * @project: Chat Board
+ * @setID: 4D
+ * @courseID: COMP 4952
+ * @instructors: Mirela Gutica & Medhat Elmasry 
+ * **/
 namespace ChatBoard.Models
 {
     public class IndexViewModel

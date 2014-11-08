@@ -25,9 +25,5 @@ namespace ChatBoard.Controllers
         {
             return View();
         }
-        public ActionResult TestView1()
-        {
-            return View();
-        }
     }
 }

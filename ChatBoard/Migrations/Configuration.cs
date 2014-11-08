@@ -9,8 +9,7 @@ namespace ChatBoard.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
-            ContextKey = "ChatBoard.Models.ApplicationDbContext";
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(ChatBoard.Models.ApplicationDbContext context)

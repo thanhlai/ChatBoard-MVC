@@ -25,12 +25,18 @@ namespace ChatBoard
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-social.css",
                       "~/Content/site.css"));
 
-            //Register View JS Bundle
+            //Register and Login View JS Bundle
             bundles.Add(new ScriptBundle("~/bundles/register").Include(
                 "~/Scripts/jquery.validate*",
                 "~/Scripts/register.js"));
+            bundles.Add(new ScriptBundle("~/bundles/login").Include(
+                "~/Scripts/jquery.validate*",
+                "~/Scripts/login.js"));
+
+            
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862
