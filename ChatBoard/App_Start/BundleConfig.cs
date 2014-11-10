@@ -25,7 +25,6 @@ namespace ChatBoard
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/bootstrap-social.css",
                       "~/Content/site.css"));
 
             //Register and Login View JS Bundle
@@ -35,7 +34,9 @@ namespace ChatBoard
             bundles.Add(new ScriptBundle("~/bundles/login").Include(
                 "~/Scripts/jquery.validate*",
                 "~/Scripts/login.js"));
-
+            bundles.Add(new ScriptBundle("~/bundles/testview1").Include(
+                "~/Scripts/jquery.validate*",
+                "~/Scripts/testview1.js"));
             
 
             // Set EnableOptimizations to false for debugging. For more information,

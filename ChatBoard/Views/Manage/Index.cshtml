@@ -1,49 +1,89 @@
 ﻿@model ChatBoard.Models.IndexViewModel
+@using Microsoft.AspNet.Identity;
+@using Microsoft.AspNet.Identity.EntityFramework;
+@using ChatBoard.Models;
 @{
     ViewBag.Title = "Manage";
 }
-<p class="text-success">@ViewBag.StatusMessage</p>
-<div>
+@{
+    if (Request.IsAuthenticated)
+    {
+        var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+        var currentUser = manager.FindById(User.Identity.GetUserId());
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">User profile</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle"> </div>
+                                <div class=" col-md-9 col-lg-9 ">
+                                    <table class="table table-user-information">
+                                        <tbody>
+                                            <tr>
+                                                <td>Username:</td>
+                                                <td><div contenteditable="true">@currentUser.UserName</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-top: 10px;">Password:</td>
+                                                <td>
+                                                    @if (Model.HasPassword)
+                                                    {
+                                                        @Html.ActionLink("Change", "ChangePassword", null, new { @class = "btn btn-xs btn-warning" })
+                                                    }
+                                                    else
+                                                    {
+                                                        @Html.ActionLink("Set Password", "SetPassword", null, new { @class = "btn btn-xs btn-warning" })
+                                                    }
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>First Name:</td>
+                                                <td><div contenteditable="true">@currentUser.FirstName</div></td>
+                                            </tr>
 
-
-
-    <div class="container">
-        <h4>Change your account settings</h4>
-        <div class="col-md-4">
-            <div class="btn btn-default margin-top-a-bit">
-                @if (Model.HasPassword)
-                {
-                    @Html.ActionLink("Change your password", "ChangePassword")
-                }
-                else
-                {
-                    @Html.ActionLink("Create", "SetPassword")
-                }
-            </div>
-            <div class="btn btn-default margin-top-a-bit">
-                You have
-                @Model.Logins.Count
-                @Html.ActionLink("External Logins", "ManageLogins")
+                                            <tr>
+                                            <tr>
+                                                <td>Last Name:</td>
+                                                <td><div contenteditable="true">@currentUser.LastName</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Email:</td>
+                                                <td><a href="mailto:@currentUser.Email">@currentUser.Email</a>
+                                                    <i class="glyphicon glyphicon-cog"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Phone Number:</td>
+                                                <td><div contenteditable="true">@currentUser.PhoneNumber</div></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Social Media:</td>
+                                                <td>
+                                                    @{
+                                                        @Model.Logins.Count
+                                                        @Html.ActionLink("External Logins", "ManageLogins")
+                                                    }
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <span class="pull-right">
+                                <a href="#" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-success"><i class="glyphicon glyphicon-ok"></i> Save Changes</a>
+                                <a href="#" data-original-title="Remove this user" data-toggle="tooltip" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i> Discard Changes</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="col-md-8  margin-top-a-bit">
-            <div class="col-md-4">
-                <img src="~/Content/default_avatar.png" alt="Default Avatar" />
-            </div>
-            <div class="col-md-8 container">
-                <label>First Name: </label>
-                <input type="text" value="Thanh" />
-                <label>Last Name: </label>
-                <input type="text" value="Lai" />
-                <label>Email: </label>
-                <input type="text" value="hello@thanh.com" />
-                <label>Phone: </label>
-                <input type="text" value="604-387-4055" />
-            </div>
-
-        </div>
-    </div>
-
-</div>
-
+    }
+    //else - redirect to login view
+}
