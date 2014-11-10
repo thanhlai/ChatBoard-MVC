@@ -34,7 +34,37 @@ namespace ChatBoard.Controllers
                 _userManager = value;
             }
         }
+        /// <summary>
+        /// POST: /Manage/ChangeUserProfile
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ChangeUserProfile(IndexViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
 
+            ApplicationUser Model = UserManager.FindById(User.Identity.GetUserId());
+
+            Model.UserName = model.UserName;
+            Model.FirstName = model.FirstName;
+            Model.LastName = model.LastName;
+            Model.Email = model.Email;
+            Model.PhoneNumber = model.PhoneNumber;
+
+            IdentityResult result = await UserManager.UpdateAsync(Model);
+
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index", "Manage");
+            }
+            AddErrors(result);
+            return View(model);
+        }
         //
         // GET: /Manage/Index
         public async Task<ActionResult> Index(ManageMessageId? message)
@@ -58,6 +88,9 @@ namespace ChatBoard.Controllers
             };
             return View(model);
         }
+
+
+
 
         //
         // GET: /Manage/RemoveLogin

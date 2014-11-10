@@ -13,74 +13,102 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">User profile</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle"> </div>
-                                <div class=" col-md-9 col-lg-9 ">
-                                    <table class="table table-user-information">
-                                        <tbody>
-                                            <tr>
-                                                <td>Username:</td>
-                                                <td><div contenteditable="true">@currentUser.UserName</div></td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding-top: 10px;">Password:</td>
-                                                <td>
-                                                    @if (Model.HasPassword)
-                                                    {
-                                                        @Html.ActionLink("Change", "ChangePassword", null, new { @class = "btn btn-xs btn-warning" })
-                                                    }
-                                                    else
-                                                    {
-                                                        @Html.ActionLink("Set Password", "SetPassword", null, new { @class = "btn btn-xs btn-warning" })
-                                                    }
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>First Name:</td>
-                                                <td><div contenteditable="true">@currentUser.FirstName</div></td>
-                                            </tr>
+                    @using (Html.BeginForm("ChangeUserProfile", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">User profile</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle"> </div>
+                                    <div class=" col-md-9 col-lg-9 ">
+                                        <table class="table table-user-information">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="padding-top: 15px;">Username:</td>
+                                                    <td>
+                                                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @placeholder=@currentUser.UserName})
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 10px;">Password:</td>
+                                                    <td>
+                                                        @if (Model.HasPassword)
+                                                        {
+                                                            @Html.ActionLink("Change", "ChangePassword", null, new { @class = "btn btn-xs btn-warning" })
+                                                        }
+                                                        else
+                                                        {
+                                                            @Html.ActionLink("Set Password", "SetPassword", null, new { @class = "btn btn-xs btn-warning" })
+                                                        }
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 15px;">First Name:</td>
+                                                    <td>
+                                                        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", @placeholder=@currentUser.FirstName })
+                                                    </td>
+                                                </tr>
 
-                                            <tr>
-                                            <tr>
-                                                <td>Last Name:</td>
-                                                <td><div contenteditable="true">@currentUser.LastName</div></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Email:</td>
-                                                <td><a href="mailto:@currentUser.Email">@currentUser.Email</a>
-                                                    <i class="glyphicon glyphicon-cog"></i>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Phone Number:</td>
-                                                <td><div contenteditable="true">@currentUser.PhoneNumber</div></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Social Media:</td>
-                                                <td>
-                                                    @{
-                                                        @Model.Logins.Count
-                                                        @Html.ActionLink("External Logins", "ManageLogins")
-                                                    }
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                <tr>
+                                                <tr>
+                                                    <td style="padding-top: 15px;">Last Name:</td>
+                                                    <td>
+                                                        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", @placeholder = @currentUser.LastName })
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 15px;">Email:</td>
+                                                    <td>
+                                                        @*<a href="mailto:@currentUser.Email">*@
+                                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = @currentUser.Email })
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 15px;">Phone Number:</td>
+                                                    <td>
+                                                        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", @placeholder = @currentUser.PhoneNumber })
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-top: 13px;">Social Media:</td>
+                                                    <td>
+                                                        @*@{
+                                                            @Model.Logins.Count
+                                                            @Html.ActionLink("External Logins", "ManageLogins")
+                                                        }*@
+                                                        <a class="btn btn-sm btn-social-icon btn-twitter">
+                                                            <i class="fa fa-twitter"></i>
+                                                        </a>
+                                                        <a class="btn btn-sm btn-social-icon btn-facebook">
+                                                            <i class="fa fa-facebook"></i>
+                                                        </a>
+                                                        <a class="btn btn-sm btn-social-icon btn-linkedin">
+                                                            <i class="fa fa-linkedin"></i>
+                                                        </a>
+                                                        <a class="btn btn-sm btn-social-icon btn-google-plus">
+                                                            <i class="fa fa-google"></i>
+                                                        </a>
+                                                        <a class="btn btn-sm btn-social-icon btn-microsoft">
+                                                            <i class="fa fa-windows"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="panel-footer">
+                                <span class="pull-right">
+                                    <input type="submit" data-original-title="Edit this user" data-toggle="tooltip" class="btn btn-sm btn-success" value="Save Changes" />
+                                    <input type="submit" data-original-title="Remove changes" data-toggle="tooltip" class="btn btn-sm btn-danger" value="Discard Changes" />
+                                </span>
+                            </div>
                         </div>
-                        <div class="panel-footer">
-                            <span class="pull-right">
-                                <a href="#" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-success"><i class="glyphicon glyphicon-ok"></i> Save Changes</a>
-                                <a href="#" data-original-title="Remove this user" data-toggle="tooltip" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i> Discard Changes</a>
-                            </span>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>
