@@ -50,6 +50,9 @@ namespace ChatBoard.Controllers
 
             ApplicationUser Model = UserManager.FindById(User.Identity.GetUserId());
 
+            if (string.IsNullOrEmpty(model.UserName) || string.IsNullOrEmpty(model.FirstName) || string.IsNullOrEmpty(model.LastName) || string.IsNullOrEmpty(model.Email) || string.IsNullOrEmpty(model.PhoneNumber))
+                return View("Index",model);
+                
             Model.UserName = model.UserName;
             Model.FirstName = model.FirstName;
             Model.LastName = model.LastName;
@@ -63,7 +66,7 @@ namespace ChatBoard.Controllers
                 return RedirectToAction("Index", "Manage");
             }
             AddErrors(result);
-            return View(model);
+            return View("Index", model);
         }
         //
         // GET: /Manage/Index

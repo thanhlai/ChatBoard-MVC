@@ -29,26 +29,19 @@
                                                 <tr>
                                                     <td style="padding-top: 15px;">Username:</td>
                                                     <td>
-                                                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @placeholder=@currentUser.UserName})
+                                                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @Value = @currentUser.UserName, @placeholder = @currentUser.UserName })
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td style="padding-top: 10px;">Password:</td>
                                                     <td>
-                                                        @if (Model.HasPassword)
-                                                        {
-                                                            @Html.ActionLink("Change", "ChangePassword", null, new { @class = "btn btn-xs btn-warning" })
-                                                        }
-                                                        else
-                                                        {
-                                                            @Html.ActionLink("Set Password", "SetPassword", null, new { @class = "btn btn-xs btn-warning" })
-                                                        }
+                                                        @Html.ActionLink("Change", "ChangePassword", null, new { @class = "btn btn-xs btn-warning" })
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td style="padding-top: 15px;">First Name:</td>
                                                     <td>
-                                                        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", @placeholder=@currentUser.FirstName })
+                                                        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", @Value = @currentUser.FirstName, @placeholder = @currentUser.FirstName })
                                                     </td>
                                                 </tr>
 
@@ -56,14 +49,14 @@
                                                 <tr>
                                                     <td style="padding-top: 15px;">Last Name:</td>
                                                     <td>
-                                                        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", @placeholder = @currentUser.LastName })
+                                                        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", @Value = @currentUser.LastName, @placeholder = @currentUser.LastName })
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td style="padding-top: 15px;">Email:</td>
                                                     <td>
                                                         @*<a href="mailto:@currentUser.Email">*@
-                                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = @currentUser.Email })
+                                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @Value = @currentUser.Email, @placeholder = @currentUser.Email })
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -76,9 +69,9 @@
                                                     <td style="padding-top: 13px;">Social Media:</td>
                                                     <td>
                                                         @*@{
-                                                            @Model.Logins.Count
-                                                            @Html.ActionLink("External Logins", "ManageLogins")
-                                                        }*@
+                                                                @Model.Logins.Count
+                                                                @Html.ActionLink("External Logins", "ManageLogins")
+                                                            }*@
                                                         <a class="btn btn-sm btn-social-icon btn-twitter">
                                                             <i class="fa fa-twitter"></i>
                                                         </a>
@@ -104,7 +97,7 @@
                             <div class="panel-footer">
                                 <span class="pull-right">
                                     <input type="submit" data-original-title="Edit this user" data-toggle="tooltip" class="btn btn-sm btn-success" value="Save Changes" />
-                                    <input type="submit" data-original-title="Remove changes" data-toggle="tooltip" class="btn btn-sm btn-danger" value="Discard Changes" />
+                                    <input type="button" data-original-title="Remove changes" data-toggle="tooltip" class="btn btn-sm btn-danger" value="Discard Changes" onclick="location.href='@Url.Action("Index", "Manage")'" />
                                 </span>
                             </div>
                         </div>
