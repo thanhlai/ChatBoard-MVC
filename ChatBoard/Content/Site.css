@@ -452,10 +452,10 @@ body {
 {
     margin-right: 5px;
 }
-.panel-body
+#chat-panel-body
 {
     overflow-y: scroll;
-    height: 280px;
+    height: 300px;
 }
 
 ::-webkit-scrollbar-track

@@ -1,5 +1,5 @@
 ﻿@model ChatBoard.Models.Post
-
+@using Microsoft.AspNet.Identity
 @{
     ViewBag.Title = @Html.DisplayFor(model => model.Title);
 }
@@ -14,7 +14,7 @@
                     <ul class="dropdown-menu" role="menu">
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="@(Url.Action("Edit", "Post", new { id = Model.Id }))">Edit</a></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="@(Url.Action("Delete", "Post", new { id = Model.Id }))">Delete</a></li>
-                        
+
                         <li role="presentation"><a role="menuitem" tabindex="-1" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Chat</a></li>
 
                         <li role="presentation" class="divider"></li>
@@ -57,7 +57,7 @@
                 </div>
                 <!-- Chat Snippet -->
                 <div class="panel-collapse collapse" id="collapseOne">
-                    <div class="panel-body">
+                    <div class="panel-body" id="chat-panel-body">
                         <ul class="chat">
                             <li class="left clearfix">
                                 <span class="chat-img pull-left">
@@ -65,55 +65,7 @@
                                 </span>
                                 <div class="chat-body clearfix">
                                     <div class="header">
-                                        <strong class="primary-font">Anonymous</strong> <small class="pull-right text-muted">
-                                            <span class="glyphicon glyphicon-time"></span>12 mins ago
-                                        </small>
-                                    </div>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                                        dolor, quis ullamcorper ligula sodales.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="right clearfix">
-                                <span class="chat-img pull-right">
-                                    <img src="~/Content/Images/default_avatar3.png" width="50" height="50" alt="User Avatar" class="img-thumbnail" />
-                                </span>
-                                <div class="chat-body clearfix">
-                                    <div class="header">
-                                        <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
-                                        <strong class="pull-right primary-font">Russell Doe</strong>
-                                    </div>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                                        dolor, quis ullamcorper ligula sodales.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="left clearfix">
-                                <span class="chat-img pull-left">
-                                    <img src="~/Content/Images/default_avatar2.png" width="50" height="50" alt="User Avatar" class="img-thumbnail" />
-                                </span>
-                                <div class="chat-body clearfix">
-                                    <div class="header">
-                                        <strong class="primary-font">Anonymous</strong> <small class="pull-right text-muted">
-                                            <span class="glyphicon glyphicon-time"></span>14 mins ago
-                                        </small>
-                                    </div>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
-                                        dolor, quis ullamcorper ligula sodales.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="right clearfix">
-                                <span class="chat-img pull-right">
-                                    <img src="~/Content/Images/default_avatar3.png" width="50" height="50" alt="User Avatar" class="img-thumbnail" />
-                                </span>
-                                <div class="chat-body clearfix">
-                                    <div class="header">
-                                        <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
-                                        <strong class="pull-right primary-font">Russell Doe</strong>
+                                        <strong class="primary-font">Anonymous</strong>
                                     </div>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
@@ -125,11 +77,9 @@
                     </div>
                     <div class="panel-footer">
                         <div class="input-group">
-                            <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                            <input id="message" type="text" class="form-control input-sm" placeholder="Type your message here..." />
                             <span class="input-group-btn">
-                                <button class="btn btn-primary btn-sm" id="btn-chat">
-                                    Send
-                                </button>
+                                <input class="btn btn-primary btn-sm" type="button" id="sendmessage" value="Send" />
                             </span>
                         </div>
                     </div>
@@ -139,6 +89,100 @@
         </div>
     </div>
 </div>
-@section Scripts {
-    @Scripts.Render("~/bundles/chat")
+<div class="chat">
+    <div class="chat-content">
+        <ul id="discussion"></ul>
+    </div>
+</div>
+@if ((System.Web.HttpContext.Current.User.Identity.IsAuthenticated) && (System.Web.HttpContext.Current.User != null))
+{
+    @section scripts {
+        @Scripts.Render("~/bundles/chat")
+        <!--Script references. -->
+        <!--The jQuery library is required and is referenced by default in _Layout.cshtml. -->
+        <!--Reference the SignalR library. -->
+        <script src="~/Scripts/jquery.signalR-2.1.2.min.js"></script>
+        <!--Reference the autogenerated SignalR hub script. -->
+        <script src="~/signalr/hubs"></script>
+        <!--SignalR script to update the chat page and send messages.-->
+        <script>
+            $(function () {
+                // Reference the auto-generated proxy for the hub.
+                var chat = $.connection.chatHub;
+
+                var username = '<span class="btn btn-sm btn-info">' + "@(User.Identity.GetUserName())" + '</span>';
+                // Create a function that the hub can call back to display messages.
+                chat.client.addNewMessageToPage = function (name, message) {
+                    // Add the message to the page.
+                    $('#discussion').append('<li>' + name + ' : ' + message + '</li>');
+                };
+                // Set initial focus to message input box.
+                $('‪#‎message‬').focus();
+                // Start the connection.
+                $.connection.hub.start().done(function () {
+                    $('#sendmessage').click(function () {
+                        // Call the Send method on the hub.
+                        if ($('#message').val().trim() != '') {
+                            chat.server.send(username, $('#message').val());
+                            // Clear text box and reset focus for next comment.
+                            $('#message').val('').focus();
+                        }
+                    });
+                    document.onkeypress = function (e) {
+                        if (e.keyCode == 13) {
+                            if ($('#message').val().trim() != '') {
+                                chat.server.send(username, $('#message').val());
+                                $('#message').val('').focus();
+                            }
+                        }
+                    }
+                });
+            });
+        </script>
+    }
+}
+else
+{
+    @section scripts {
+        @Scripts.Render("~/bundles/chat")
+        <!--Script references. -->
+        <!--The jQuery library is required and is referenced by default in _Layout.cshtml. -->
+        <!--Reference the SignalR library. -->
+        <script src="~/Scripts/jquery.signalR-2.1.2.min.js"></script>
+        <!--Reference the autogenerated SignalR hub script. -->
+        <script src="~/signalr/hubs"></script>
+        <!--SignalR script to update the chat page and send messages.-->
+        <script>
+            $(function () {
+                // Reference the auto-generated proxy for the hub.
+                var chat = $.connection.chatHub;
+                // Create a function that the hub can call back to display messages.
+                chat.client.addNewMessageToPage = function (name, message) {
+                    // Add the message to the page.
+                    $('#discussion').append('<li>' + name + ' : ' + message + '</li>');             //Edit here
+                };
+                // Set initial focus to message input box.
+                $('‪#‎message‬').focus();
+                // Start the connection.
+                $.connection.hub.start().done(function () {
+                    $('#sendmessage').click(function () {
+                        // Call the Send method on the hub.
+                        if ($('#message').val().trim() != '') {
+                            chat.server.send('Anonymous', $('#message').val());
+                            // Clear text box and reset focus for next comment.
+                            $('#message').val('').focus();
+                        }
+                    });
+                    document.onkeypress = function (e) {
+                        if (e.keyCode == 13) {
+                            if ($('#message').val().trim() != '') {
+                                chat.server.send('Guest', $('#message').val());
+                                $('#message').val('').focus();
+                            }
+                        }
+                    }
+                });
+            });
+        </script>
+    }
 }
