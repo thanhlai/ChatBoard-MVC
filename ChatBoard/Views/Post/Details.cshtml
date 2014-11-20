@@ -29,21 +29,12 @@
                     </ul>
                 </div>
                 <div class="panel-heading">
-                    <img class="[ img-thumbnail pull-left ]" src="~/Content/Images/default_avatar1.png" width="75" height="75" alt="OwnerAvatar" />
+                    <img class="[ img-thumbnail pull-left ]" src='@Url.Action("ShowOwnerAvatar", "Post", new { id = Model.Id })' width="75" height="75" alt="OwnerAvatar" />
                     <h3>@Model.Owner</h3>
                     <h5><span>Shared publicly</span> - <span>@Html.DisplayFor(model => model.DateCreated)</span> </h5>
                 </div>
                 <div class="panel-body">
                     @Html.DisplayFor(model => model.Content)
-                </div>
-                <div class="panel-google-plus-comment">
-                    <img class="img-circle" src="https://lh3.googleusercontent.com/uFp_tsTJboUY7kue5XAsGA=s46" alt="User Image" />
-                    <div class="panel-google-plus-textarea">
-                        <textarea rows="4"></textarea>
-                        <button type="submit" class="[ btn btn-xs btn-success disabled ]">Post comment</button>
-                        <button type="reset" class="[ btn btn-xs btn-default ]">Cancel</button>
-                    </div>
-                    <div class="clearfix"></div>
                 </div>
                 <!-- Chat Snippet -->
                 <div class="panel-collapse collapse" id="collapseOne">
@@ -67,7 +58,6 @@
 @if ((System.Web.HttpContext.Current.User.Identity.IsAuthenticated) && (System.Web.HttpContext.Current.User != null))
 {
     @section scripts {
-        @Scripts.Render("~/bundles/chat")
         <!--Script references. -->
         <!--The jQuery library is required and is referenced by default in _Layout.cshtml. -->
         <!--Reference the SignalR library. -->
@@ -131,7 +121,6 @@
 else
 {
     @section scripts {
-        @Scripts.Render("~/bundles/chat")
         <!--Script references. -->
         <!--The jQuery library is required and is referenced by default in _Layout.cshtml. -->
         <!--Reference the SignalR library. -->
@@ -167,7 +156,7 @@ else
                     $('#sendmessage').click(function () {
                         // Call the Send method on the hub.
                         if ($('#message').val().trim() != '') {
-                            chat.server.send('Anonymous', $('#message').val());
+                            chat.server.send(username, $('#message').val());
                             // Clear text box and reset focus for next comment.
                             $('#message').val('').focus();
                         }
@@ -175,7 +164,7 @@ else
                     document.onkeypress = function (e) {
                         if (e.keyCode == 13) {
                             if ($('#message').val().trim() != '') {
-                                chat.server.send('Guest', $('#message').val());
+                                chat.server.send(username, $('#message').val());
                                 $('#message').val('').focus();
                             }
                         }

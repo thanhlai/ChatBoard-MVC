@@ -37,10 +37,6 @@ namespace ChatBoard
                 "~/Scripts/jquery.validate*",
                 "~/Scripts/login.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/chat").Include(
-                "~/Scripts/jquery.validate*",
-                "~/Scripts/chat.js"));
-
             bundles.Add(new ScriptBundle("~/bundles/testview1").Include(
                 "~/Scripts/jquery.validate*",
                 "~/Scripts/testview1.js"));

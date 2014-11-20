@@ -7,6 +7,8 @@ using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Drawing;
+using System.IO;
 
 namespace ChatBoard.Controllers
 {
@@ -133,7 +135,38 @@ namespace ChatBoard.Controllers
             {
                 return HttpNotFound();
             }
+            var owner = from post in db.Posts
+                        where post.Id == id.Value
+                        select post.Owner;
+            string ownerUserName = "";
+            if (owner != null)
+                ownerUserName = owner.FirstOrDefault();
+            var ownerAvatar = from user in db.Users
+                              where user.UserName == ownerUserName
+                              select user.Avatar;
+
+            byte[] avatar = ownerAvatar.FirstOrDefault();
+
             return View(db.Posts.Find(id));
+        }
+
+        public ActionResult ShowOwnerAvatar(int? id)
+        {
+            var owner = from post in db.Posts
+                        where post.Id == id.Value
+                        select post.Owner;
+            string ownerUserName = "";
+            if (owner != null)
+                ownerUserName = owner.FirstOrDefault();
+            var ownerAvatar = from user in db.Users
+                              where user.UserName == ownerUserName
+                              select user.Avatar;
+
+            byte[] avatar = ownerAvatar.FirstOrDefault();
+            if (avatar != null)
+                return File(avatar, "image/jpg");
+            else
+                return File("/Content/Images/default_avatar1.png", "image/jpg");
         }
     }
 }
