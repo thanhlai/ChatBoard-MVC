@@ -22,6 +22,8 @@ namespace ChatBoard.Models
         public string LastName { get; set; }
         public string UserName { get; set; }
         public string Email { get; set; }
+        public byte[] Avatar { get; set; }
+        public string ReturnUrl { get; set; }
     }
 
     public class ManageLoginsViewModel

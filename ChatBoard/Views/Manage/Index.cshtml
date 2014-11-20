@@ -2,6 +2,7 @@
 @using Microsoft.AspNet.Identity;
 @using Microsoft.AspNet.Identity.EntityFramework;
 @using ChatBoard.Models;
+
 @{
     ViewBag.Title = "Manage";
 }
@@ -13,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
-                    @using (Html.BeginForm("ChangeUserProfile", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    @using (Html.BeginForm("ChangeUserProfile", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
                     {
                         @Html.AntiForgeryToken()
                         <div class="panel panel-info">
@@ -22,7 +23,21 @@
                             </div>
                             <div class="panel-body">
                                 <div class="row">
-                                    <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle"> </div>
+                                    <div class="col-md-3 col-lg-3 " align="center">
+
+                                        @if (currentUser.Avatar == null)
+                                        {
+                                            <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle">
+                                        }
+                                        else
+                                        {
+                                            <img alt="User Pic" src='@Url.Action("ShowCurrentUserAvatar", "Manage")' class="img-circle" width="100" height="100" />
+                                        }
+                                        <span class="btn btn-sm btn-default btn-file">
+                                            Browse <input type="file" name="uploadFile">
+                                        </span>
+                                    </div>
+
                                     <div class=" col-md-9 col-lg-9 ">
                                         <table class="table table-user-information">
                                             <tbody>
@@ -68,25 +83,21 @@
                                                 <tr>
                                                     <td style="padding-top: 13px;">Social Media:</td>
                                                     <td>
-                                                        @*@{
-                                                                @Model.Logins.Count
-                                                                @Html.ActionLink("External Logins", "ManageLogins")
-                                                            }*@
-                                                        <a class="btn btn-sm btn-social-icon btn-twitter">
+                                                        <a href="@(Url.Action("ManageLogins", "Manage"))" class="btn btn-sm btn-social-icon btn-twitter">
                                                             <i class="fa fa-twitter"></i>
                                                         </a>
-                                                        <a class="btn btn-sm btn-social-icon btn-facebook">
+                                                        <a href="@(Url.Action("ManageLogins", "Manage"))" class="btn btn-sm btn-social-icon btn-facebook">
                                                             <i class="fa fa-facebook"></i>
                                                         </a>
-                                                        <a class="btn btn-sm btn-social-icon btn-linkedin">
+                                                        <a href="@(Url.Action("ManageLogins", "Manage"))" class="btn btn-sm btn-social-icon btn-linkedin">
                                                             <i class="fa fa-linkedin"></i>
                                                         </a>
-                                                        <a class="btn btn-sm btn-social-icon btn-google-plus">
+                                                        <a href="@(Url.Action("ManageLogins", "Manage"))" class="btn btn-sm btn-social-icon btn-google-plus">
                                                             <i class="fa fa-google"></i>
                                                         </a>
-                                                        <a class="btn btn-sm btn-social-icon btn-microsoft">
+                                                        <a href="@(Url.Action("ManageLogins", "Manage"))" class="btn btn-sm btn-social-icon btn-microsoft">
                                                             <i class="fa fa-windows"></i>
-                                                        </a>
+                                                        </a>                             
                                                     </td>
                                                 </tr>
                                             </tbody>

@@ -42,6 +42,14 @@
             </fieldset>
         </div>
     </div>
+
+    <!-- External logins-->
+    <div class="center-this-line">
+        <section id="socialLoginForm">
+            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+        </section>
+    </div>
+
 </div>
 
 @section Scripts {

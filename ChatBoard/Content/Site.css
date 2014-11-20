@@ -15,6 +15,12 @@
     width: 100%;
 }
 
+/*Search bar*/
+#SearchString {
+    display: inline;
+	width: 250px;
+}
+
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
@@ -38,8 +44,13 @@ textarea {
 .table-responsive {
     margin-top: 40px;
 }
+
 /*footer*/
 footer {
+    font-size: smaller;
+    width:100%;
+    bottom:0;
+    position: fixed;
     margin-top: 50px;
     text-align: center;
 }
@@ -47,14 +58,6 @@ footer {
  /* Chat View CSS */
 header {
 padding-top: 10px;
-}
-
-.logo {
-background: url('logo.png') no-repeat;
-background-size: 150px 50px;
-width: 150px;
-height: 50px;
-display: inline-block;
 }
 
 .action-dropdown {
@@ -227,6 +230,26 @@ ul
 }
 .toppad
 {margin-top:20px;
+}
+/*Upload button*/
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
 }
 
 
@@ -444,6 +467,7 @@ body {
 
 .chat li .chat-body p
 {
+    font-size:small;
     margin: 0;
     color: #777777;
 }

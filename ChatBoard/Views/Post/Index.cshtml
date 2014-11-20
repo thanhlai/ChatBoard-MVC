@@ -3,28 +3,27 @@
 @{
     ViewBag.Title = "Show All Posts";
 }
-
-<div class="col-md-8 col-md-offset-2">
+<div class="container">
     <div class="table-responsive">
         <table class="table">
-            <thead>
-                <tr>
-                    <th class="col-md-8"><strong>Thread</strong></th>
-                    <th class="col-md-2"><strong>Owner</strong></th>
-                    <th class="col-md-1"><strong>Replies</strong></th>
-                    <th class="col-md-1"><strong>Views</strong></th>
+            <thead class="panel panel-default">
+                <tr class="panel-heading">
+                    <th class="col-md-8"><i class="glyphicon glyphicon-file"></i> Thread</th>
+                    <th class="col-md-2 text-center"><i class="glyphicon glyphicon-user"></i> Owner</th>
+                    <th class="col-md-1 text-center"><i class="glyphicon glyphicon-comment"></i> Replies</th>
+                    <th class="col-md-1 text-center"><i class="glyphicon glyphicon-eye-open"></i> Views</th>
                 </tr>
             </thead>
-            <tbody>
-                    @foreach (var item in Model)
-                    {
-                        <tr>
-                            <td>@Html.ActionLink(item.Title, "Details", new { id = item.Id })</td>
-                            <td>@Html.DisplayFor(modelItem => item.ApplicationUser.UserName)</td>
-                            <td>1,111</td>
-                            <td>2,223</td>
-                        </tr>
-                    }
+            <tbody class="panel-body">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.ActionLink(item.Title, "Details", new { id = item.Id })</td>
+                        <td class="text-center">@item.Owner</td>
+                        <td class="text-center">1,111</td>
+                        <td class="text-center">2,223</td>
+                    </tr>
+                }
             </tbody>
         </table>
     </div>

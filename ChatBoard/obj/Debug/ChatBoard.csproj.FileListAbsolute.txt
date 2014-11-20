@@ -617,3 +617,5 @@ C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\bin\Microsoft.AspNet.Identity.EntityF
 C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\obj\Debug\ChatBoard.csprojResolveAssemblyReference.cache
 C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\obj\Debug\ChatBoard.dll
 C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\obj\Debug\ChatBoard.pdb
+C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\obj\Debug\ChatBoard.Migrations.Initial.resources
+C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\obj\Debug\ChatBoard.csproj.GenerateResource.Cache

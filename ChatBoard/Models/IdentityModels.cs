@@ -27,7 +27,10 @@ namespace ChatBoard.Models
         [Display(Name = "Last Name")]
         public virtual string LastName { get; set; }
 
+        public byte[] Avatar { get; set; }
+
         public virtual ICollection<Post> Posts { get; set; }
+        public virtual ICollection<Message> Messages { get; set; }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -44,7 +47,7 @@ namespace ChatBoard.Models
         {
         }
         public DbSet<Post> Posts { get; set; }
-        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Message> Messages { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

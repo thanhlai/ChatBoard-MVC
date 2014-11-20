@@ -5,6 +5,8 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace ChatBoard.Controllers
 {
@@ -12,14 +14,44 @@ namespace ChatBoard.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Post - Show all posts
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    return View(db.Posts.ToList());
+        //}
+
+        // GET: Post - Search for posts
+        public ActionResult Index(string searchString)
         {
-            return View(db.Posts.ToList());
+            var postsByTopic = from post in db.Posts
+                        select post;
+            var postsByUserName = from post in db.Posts
+                        select post;
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                postsByTopic = postsByTopic.Where(s => s.Title.Contains(searchString));   // search by topic
+                if (postsByTopic.Count() == 0) // no posts found by topic, current state, postsByTopic is null, not the same as the value that has been assigned above
+                {
+                    // search by owner username
+                    postsByUserName = postsByUserName.Where(s => s.Owner.Contains(searchString));
+                    return View(postsByUserName);
+                }
+            }
+            else
+            {
+                return View(db.Posts.ToList());
+            }
+            return View(postsByTopic);
         }
+
         // GET: Create
         public ActionResult Create()
         {
-            return View();
+            if ((System.Web.HttpContext.Current.User.Identity.IsAuthenticated) && (System.Web.HttpContext.Current.User != null))
+            {
+                return View();
+            }   
+            else
+                return RedirectToAction("Index");
         }
         // POST: Create
         [HttpPost]
@@ -30,18 +62,23 @@ namespace ChatBoard.Controllers
             {
                 return View();
             }
+            // Remember to validate these info first
+            post.UserId = User.Identity.GetUserId();
+            post.Owner = User.Identity.GetUserName();
+            post.DateCreated = DateTime.Now;
             db.Posts.Add(post);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
 
         // GET: Edit, same as Details
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
-            if (db == null)
+            if (id == null || db == null)
             {
                 return HttpNotFound();
             }
+            //CHECK FOR POST OWNER HERE
             return View(db.Posts.Find(id));
         }
 
@@ -62,9 +99,9 @@ namespace ChatBoard.Controllers
         }
 
         // GET: Delete
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
-            if (db == null)
+            if (id == null || db == null)
             {
                 return HttpNotFound();
             }
@@ -90,9 +127,9 @@ namespace ChatBoard.Controllers
 
 
         // GET: Details
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
-            if (db == null)
+            if (id == null || db == null)
             {
                 return HttpNotFound();
             }
