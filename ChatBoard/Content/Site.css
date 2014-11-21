@@ -1,9 +1,23 @@
-﻿body {
+﻿html {
+    height: 100%;
+    overflow: scroll;
+}
+
+body {
     padding-top: 65px;
     padding-bottom: 20px;
     font-family:  "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+    height: 100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    font-size: 14px;
 }
-
+h2, .h2 {
+    font-size: 28px;
+}
+h4, .h4 {
+    font-size: 18px;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     margin-top: 100px;
@@ -20,6 +34,47 @@
     display: inline;
 	width: 250px;
 }
+
+
+/*Homepage table of post*/
+.thead {
+    font-size: small;
+}
+
+/*_Share Navbar Layout*/
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    min-height: 45px !important;
+}
+
+.navbar-inverse {
+	background-color: #ffffff;
+    border:none !important;
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+	font-size: 16px;
+	line-height: 16px;
+}
+#registerLink, #loginLink, #logoutForm {
+	width: auto;
+	line-height: 13px;
+	font-size: 14px;
+	height: 30px;
+	margin: 13px 5px 0;
+	border: 1px #DDD solid;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top input {
+	font-size: 12px;
+	height: 30px;
+}
+
+#searchButton {
+	font-size: 10px;
+	height: 30px;
+	width: 35px; 
+}
+
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -50,8 +105,8 @@ footer {
     font-size: smaller;
     width:100%;
     bottom:0;
-    position: fixed;
-    margin-top: 50px;
+    position: relative;
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -170,6 +225,11 @@ ul
     list-style-type: none;
 }
 
+/*Smaller dropdown menu list*/
+.dropdown-menu > li > a {
+    font-size: small;
+}
+
 
 /*My silly CSS*/
 .margin-top-a-bit {
@@ -214,6 +274,10 @@ ul
 
 .dropdown-user:hover {
     cursor: pointer;
+}
+
+.table {
+    margin-bottom: 0px;
 }
 
 .table-user-information > tbody > tr {
@@ -333,11 +397,11 @@ body {
     border-width: 0px; 
 }
 .panel-google-plus > .panel-heading {
-    margin-top: 20px;    
+    margin-top: 5px;    
     padding-bottom: 5px; 
 }
 .panel-google-plus > .panel-heading > img { 
-    margin-right: 15px;
+    margin-right: 10px;
 }
 .panel-google-plus > .panel-heading > h3 {
     margin: 0px;
@@ -420,7 +484,22 @@ body {
 @media (min-width: 992px) {
     .panel-google-plus > .panel-google-plus-comment > .panel-google-plus-textarea > .btn {
         width: auto;
-    }    
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .navbar-nav > li > a {
+        margin: 0;
+    }
+
+    #registerLink, #loginLink, #logoutForm {
+        width: 100%;
+        border: none;
+    }
+
+    #registerLink:hover, #loginLink:hover, #logoutForm:hover {
+        background-color: #DDD;
+    }
 }
 
 
@@ -467,7 +546,7 @@ body {
 
 .chat li .chat-body p
 {
-    font-size:small;
+    font-size: 14px;
     margin: 0;
     color: #777777;
 }

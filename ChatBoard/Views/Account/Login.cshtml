@@ -11,7 +11,7 @@
             <fieldset>
                 @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
                 {
-                    <h2>Please Sign In</h2>
+                    <h2>Please Sign In <small>It's free and always will be.</small></h2>
                     <hr class="colorgraph">
 
                     @Html.AntiForgeryToken()

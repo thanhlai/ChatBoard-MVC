@@ -80,7 +80,19 @@ namespace ChatBoard.Controllers
             {
                 return HttpNotFound();
             }
-            //CHECK FOR POST OWNER HERE
+
+            string currentUserName = User.Identity.GetUserName();
+
+            //CHECK FOR POST'S OWNER HERE
+            var owner = from post in db.Posts
+                        where post.Id == id.Value
+                        select post.Owner;
+
+           if (!(User.Identity.GetUserName() == owner.FirstOrDefault()))  // the logged in user is not logged in
+           {
+               return RedirectToAction("Details", "Post", new { id = id.Value});
+           }
+
             return View(db.Posts.Find(id));
         }
 
@@ -107,6 +119,19 @@ namespace ChatBoard.Controllers
             {
                 return HttpNotFound();
             }
+
+            string currentUserName = User.Identity.GetUserName();
+
+            //CHECK FOR POST'S OWNER HERE
+            var owner = from post in db.Posts
+                        where post.Id == id.Value
+                        select post.Owner;
+
+            if (!(User.Identity.GetUserName() == owner.FirstOrDefault()))  // the logged in user is not logged in
+            {
+                return RedirectToAction("Details", "Post", new { id = id.Value });
+            }
+
             return View(db.Posts.Find(id));
         }
 
@@ -147,6 +172,11 @@ namespace ChatBoard.Controllers
 
             byte[] avatar = ownerAvatar.FirstOrDefault();
 
+            // if the user logged in
+            ViewBag.IsUserLoggedIn = (System.Web.HttpContext.Current.User.Identity.IsAuthenticated) && (System.Web.HttpContext.Current.User != null);
+            // if the user is the owner of the post
+            ViewBag.IsOwner = (User.Identity.GetUserName() == ownerUserName);
+            
             return View(db.Posts.Find(id));
         }
 
