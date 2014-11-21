@@ -619,3 +619,5 @@ C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\obj\Debug\ChatBoard.dll
 C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\obj\Debug\ChatBoard.pdb
 C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\obj\Debug\ChatBoard.Migrations.Initial.resources
 C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\obj\Debug\ChatBoard.csproj.GenerateResource.Cache
+C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\bin\App_Data\ChatBoard.mdf
+C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\bin\App_Data\ChatBoard_log.ldf

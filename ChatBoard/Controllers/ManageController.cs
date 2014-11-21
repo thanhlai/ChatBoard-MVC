@@ -54,21 +54,20 @@ namespace ChatBoard.Controllers
                 return View("Index",model);
 
             // Avatar upload validation
-            if (uploadFile == null || uploadFile.ContentLength == 0)
+            if (uploadFile != null && uploadFile.ContentLength != 0)
             {
-                return View("Index", model);
+                model.Avatar = new byte[uploadFile.ContentLength];
+                uploadFile.InputStream.Read(model.Avatar, 0, uploadFile.ContentLength);
+                Model.Avatar = model.Avatar;
             }
-            model.Avatar = new byte[uploadFile.ContentLength];
-            uploadFile.InputStream.Read(model.Avatar, 0, uploadFile.ContentLength);
+ 
 
             Model.UserName = model.UserName;
             Model.FirstName = model.FirstName;
             Model.LastName = model.LastName;
             Model.Email = model.Email;
             Model.PhoneNumber = model.PhoneNumber;
-            Model.Avatar = model.Avatar;
-
-
+            
 
             IdentityResult result = await UserManager.UpdateAsync(Model);
 

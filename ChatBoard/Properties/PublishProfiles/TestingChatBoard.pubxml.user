@@ -17,244 +17,496 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/16/2014 20:58:20</publishTime>
     </File>
     <File Include="App_Data/ChatBoard.mdf">
-      <publishTime>10/24/2014 21:26:18</publishTime>
+      <publishTime>11/21/2014 11:32:25</publishTime>
     </File>
     <File Include="App_Data/ChatBoard_log.ldf">
-      <publishTime>10/24/2014 21:26:18</publishTime>
+      <publishTime>11/21/2014 11:32:25</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>10/16/2014 11:54:36</publishTime>
+      <publishTime>11/14/2014 13:44:36</publishTime>
+    </File>
+    <File Include="bin/App_Data/ChatBoard.mdf">
+      <publishTime>11/21/2014 11:32:25</publishTime>
+    </File>
+    <File Include="bin/App_Data/ChatBoard_log.ldf">
+      <publishTime>11/21/2014 11:32:25</publishTime>
     </File>
     <File Include="bin/ChatBoard.dll">
-      <publishTime>10/25/2014 14:46:28</publishTime>
+      <publishTime>11/21/2014 11:24:44</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>10/16/2014 11:52:20</publishTime>
+      <publishTime>11/14/2014 13:44:38</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>10/16/2014 11:52:22</publishTime>
+      <publishTime>11/14/2014 13:44:38</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
-      <publishTime>10/16/2014 11:52:44</publishTime>
+      <publishTime>11/14/2014 13:44:39</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
-      <publishTime>10/16/2014 11:52:52</publishTime>
+      <publishTime>11/14/2014 13:44:39</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
-      <publishTime>10/16/2014 11:52:48</publishTime>
+      <publishTime>11/14/2014 13:44:39</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.SignalR.Core.dll">
-      <publishTime>10/17/2014 11:35:20</publishTime>
+      <publishTime>11/14/2014 13:44:40</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.SignalR.SystemWeb.dll">
-      <publishTime>10/17/2014 11:35:26</publishTime>
+      <publishTime>11/14/2014 13:44:41</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.dll">
-      <publishTime>10/16/2014 11:54:44</publishTime>
+      <publishTime>11/14/2014 13:44:41</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
-      <publishTime>10/16/2014 11:54:44</publishTime>
+      <publishTime>11/14/2014 13:44:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
-      <publishTime>10/16/2014 11:54:46</publishTime>
+      <publishTime>11/14/2014 13:44:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.dll">
-      <publishTime>10/16/2014 11:54:46</publishTime>
+      <publishTime>11/14/2014 13:44:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
-      <publishTime>10/16/2014 11:54:46</publishTime>
+      <publishTime>11/14/2014 13:44:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Google.dll">
-      <publishTime>10/16/2014 11:54:46</publishTime>
+      <publishTime>11/14/2014 13:44:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
-      <publishTime>10/16/2014 11:54:48</publishTime>
+      <publishTime>11/14/2014 13:44:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
-      <publishTime>10/16/2014 11:54:48</publishTime>
+      <publishTime>11/14/2014 13:44:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
-      <publishTime>10/16/2014 11:54:48</publishTime>
+      <publishTime>11/14/2014 13:44:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>10/16/2014 11:51:52</publishTime>
+      <publishTime>11/14/2014 13:44:42</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>10/16/2014 11:54:50</publishTime>
+      <publishTime>11/14/2014 13:44:42</publishTime>
     </File>
     <File Include="bin/Owin.dll">
-      <publishTime>10/16/2014 11:52:54</publishTime>
+      <publishTime>11/14/2014 13:44:43</publishTime>
     </File>
     <File Include="bin/Owin.Security.Providers.dll">
-      <publishTime>10/18/2014 17:16:58</publishTime>
+      <publishTime>11/14/2014 13:44:43</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>10/16/2014 11:54:42</publishTime>
+      <publishTime>11/14/2014 13:44:41</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>10/16/2014 11:54:42</publishTime>
+      <publishTime>11/14/2014 13:44:39</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>10/16/2014 11:51:48</publishTime>
+      <publishTime>11/14/2014 13:44:41</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>10/16/2014 11:54:40</publishTime>
+      <publishTime>11/14/2014 13:44:39</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Deployment.dll">
-      <publishTime>10/16/2014 11:54:42</publishTime>
+      <publishTime>11/14/2014 13:44:41</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.dll">
-      <publishTime>10/16/2014 11:54:42</publishTime>
+      <publishTime>11/14/2014 13:44:41</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Razor.dll">
-      <publishTime>10/16/2014 11:54:42</publishTime>
+      <publishTime>11/14/2014 13:44:41</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
-      <publishTime>10/16/2014 11:54:52</publishTime>
+      <publishTime>11/14/2014 13:44:44</publishTime>
+    </File>
+    <File Include="Content/bootstrap-social.css">
+      <publishTime>11/14/2014 13:44:30</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css">
-      <publishTime>10/16/2014 11:55:30</publishTime>
+      <publishTime>11/14/2014 13:44:30</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css.map">
-      <publishTime>10/16/2014 11:55:30</publishTime>
+      <publishTime>11/14/2014 13:44:30</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.min.css">
-      <publishTime>10/16/2014 11:55:30</publishTime>
+      <publishTime>11/14/2014 13:44:30</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>10/15/2014 13:32:58</publishTime>
+      <publishTime>11/20/2014 20:24:34</publishTime>
     </File>
     <File Include="Content/bootstrap.css.map">
-      <publishTime>10/16/2014 11:55:32</publishTime>
+      <publishTime>11/14/2014 13:44:30</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
-      <publishTime>10/15/2014 13:32:58</publishTime>
+      <publishTime>11/20/2014 20:24:53</publishTime>
     </File>
     <File Include="Content/default_avatar.png">
-      <publishTime>10/24/2014 15:29:26</publishTime>
+      <publishTime>11/14/2014 13:44:30</publishTime>
+    </File>
+    <File Include="Content/font-awesome.css">
+      <publishTime>11/14/2014 13:44:31</publishTime>
+    </File>
+    <File Include="Content/font-awesome.min.css">
+      <publishTime>11/14/2014 13:44:31</publishTime>
+    </File>
+    <File Include="Content/Images/canada_flag.png">
+      <publishTime>11/21/2014 00:33:45</publishTime>
+    </File>
+    <File Include="Content/Images/default_avatar0.png">
+      <publishTime>11/21/2014 00:43:49</publishTime>
+    </File>
+    <File Include="Content/Images/default_avatar1.png">
+      <publishTime>11/12/2014 20:31:11</publishTime>
+    </File>
+    <File Include="Content/Images/default_avatar2.png">
+      <publishTime>11/12/2014 21:36:40</publishTime>
+    </File>
+    <File Include="Content/Images/default_avatar3.png">
+      <publishTime>11/12/2014 21:36:40</publishTime>
+    </File>
+    <File Include="Content/Images/default_avatar4.png">
+      <publishTime>11/12/2014 21:36:40</publishTime>
+    </File>
+    <File Include="Content/Images/default_avatar5.png">
+      <publishTime>11/12/2014 21:36:40</publishTime>
+    </File>
+    <File Include="Content/Images/default_avatar6.png">
+      <publishTime>11/12/2014 21:36:40</publishTime>
+    </File>
+    <File Include="Content/Images/default_avatar7.png">
+      <publishTime>11/12/2014 21:36:40</publishTime>
+    </File>
+    <File Include="Content/Images/default_avatar8.png">
+      <publishTime>11/12/2014 21:36:40</publishTime>
+    </File>
+    <File Include="Content/Images/default_avatar9.jpg">
+      <publishTime>11/19/2014 23:48:45</publishTime>
     </File>
     <File Include="Content/logo.png">
-      <publishTime>10/17/2014 11:30:00</publishTime>
+      <publishTime>11/14/2014 13:44:31</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>10/24/2014 21:09:06</publishTime>
+      <publishTime>11/21/2014 00:41:48</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles10.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles11.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles12.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles13.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles14.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles16.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles18.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles19.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles21.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles22.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles25.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles27.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles28.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles30.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles31.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles32.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles33.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles34.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles35.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles36.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles37.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles39.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles40.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles41.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles42.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles43.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles44.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles45.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles46.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles47.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles48.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles49.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles51.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles54.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles55.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles56.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles57.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles58.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles59.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles60.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles62.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles63.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles64.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles65.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles66.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles67.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles68.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles70.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles71.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles72.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles74.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles75.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles76.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles78.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles79.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles80.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles81.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles82.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles83.png">
+      <publishTime>12/02/2008 08:19:33</publishTime>
+    </File>
+    <File Include="Content/Smiles/smiles90.png">
+      <publishTime>12/02/2008 08:19:46</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>10/16/2014 12:43:58</publishTime>
+      <publishTime>11/14/2014 13:44:35</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>11/14/2014 13:44:35</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.svg">
+      <publishTime>11/14/2014 13:44:35</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>11/14/2014 13:44:35</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>11/14/2014 13:44:36</publishTime>
+    </File>
+    <File Include="fonts/FontAwesome.otf">
+      <publishTime>11/14/2014 13:44:35</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
-      <publishTime>10/16/2014 11:55:30</publishTime>
+      <publishTime>11/14/2014 13:44:36</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.svg">
-      <publishTime>10/16/2014 11:55:30</publishTime>
+      <publishTime>11/14/2014 13:44:36</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>10/16/2014 11:55:30</publishTime>
+      <publishTime>11/14/2014 13:44:36</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff">
-      <publishTime>10/16/2014 11:55:30</publishTime>
+      <publishTime>11/14/2014 13:44:36</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>10/16/2014 11:51:22</publishTime>
+      <publishTime>11/14/2014 13:44:31</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>10/18/2014 17:17:02</publishTime>
+      <publishTime>11/14/2014 13:44:36</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>10/16/2014 11:55:28</publishTime>
+      <publishTime>11/14/2014 13:44:31</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>10/16/2014 11:55:26</publishTime>
+      <publishTime>11/14/2014 13:44:31</publishTime>
+    </File>
+    <File Include="Scripts/emo.js">
+      <publishTime>11/20/2014 16:45:55</publishTime>
     </File>
     <File Include="Scripts/jquery-2.1.1.js">
-      <publishTime>10/16/2014 11:55:14</publishTime>
+      <publishTime>11/14/2014 13:44:31</publishTime>
     </File>
     <File Include="Scripts/jquery-2.1.1.min.js">
-      <publishTime>10/16/2014 11:55:12</publishTime>
+      <publishTime>11/14/2014 13:44:31</publishTime>
     </File>
     <File Include="Scripts/jquery-2.1.1.min.map">
-      <publishTime>10/16/2014 11:55:12</publishTime>
+      <publishTime>11/14/2014 13:44:31</publishTime>
     </File>
     <File Include="Scripts/jquery.signalR-2.1.2.js">
-      <publishTime>10/17/2014 11:35:30</publishTime>
+      <publishTime>11/14/2014 13:44:31</publishTime>
     </File>
     <File Include="Scripts/jquery.signalR-2.1.2.min.js">
-      <publishTime>10/17/2014 11:35:30</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
-      <publishTime>10/16/2014 11:55:46</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.min.js">
-      <publishTime>10/16/2014 11:55:44</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.js">
-      <publishTime>10/16/2014 11:56:54</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.min.js">
-      <publishTime>10/16/2014 11:56:52</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
+    </File>
+    <File Include="Scripts/login.js">
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.8.3.js">
-      <publishTime>10/16/2014 11:58:30</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
+    </File>
+    <File Include="Scripts/register.js">
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Scripts/respond.js">
-      <publishTime>10/16/2014 11:58:44</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Scripts/respond.matchmedia.addListener.js">
-      <publishTime>10/16/2014 11:58:44</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Scripts/respond.matchmedia.addListener.min.js">
-      <publishTime>10/16/2014 11:58:42</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Scripts/respond.min.js">
-      <publishTime>10/16/2014 11:58:42</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>10/17/2014 16:02:40</publishTime>
+      <publishTime>11/20/2014 16:14:18</publishTime>
     </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
-      <publishTime>10/16/2014 11:52:12</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
-      <publishTime>10/19/2014 17:49:54</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginFailure.cshtml">
-      <publishTime>10/16/2014 11:52:12</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Account/ForgotPassword.cshtml">
-      <publishTime>10/16/2014 11:52:12</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
-      <publishTime>10/16/2014 11:52:12</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>10/19/2014 18:05:28</publishTime>
+      <publishTime>11/21/2014 00:22:58</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>10/20/2014 13:22:18</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Account/ResetPassword.cshtml">
-      <publishTime>10/16/2014 11:52:12</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Account/ResetPasswordConfirmation.cshtml">
-      <publishTime>10/16/2014 11:52:12</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Account/SendCode.cshtml">
-      <publishTime>10/16/2014 11:52:12</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Account/VerifyCode.cshtml">
-      <publishTime>10/16/2014 11:52:12</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Account/_ChangePasswordPartial.cshtml">
-      <publishTime>10/16/2014 11:52:12</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
-      <publishTime>10/19/2014 17:50:16</publishTime>
+      <publishTime>11/19/2014 21:22:52</publishTime>
     </File>
     <File Include="Views/Account/_RemoveAccountPartial.cshtml">
-      <publishTime>10/16/2014 11:52:12</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Account/_SetPasswordPartial.cshtml">
-      <publishTime>10/16/2014 11:52:12</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Home/Chat.cshtml">
       <publishTime>10/24/2014 21:20:32</publishTime>
@@ -269,43 +521,58 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/24/2014 16:09:30</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
-      <publishTime>10/16/2014 11:52:12</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Manage/ChangePassword.cshtml">
-      <publishTime>10/16/2014 11:52:12</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Manage/Index.cshtml">
-      <publishTime>10/24/2014 20:40:38</publishTime>
+      <publishTime>11/21/2014 10:17:54</publishTime>
     </File>
     <File Include="Views/Manage/ManageLogins.cshtml">
-      <publishTime>10/24/2014 14:50:18</publishTime>
+      <publishTime>11/19/2014 22:19:30</publishTime>
     </File>
     <File Include="Views/Manage/SetPassword.cshtml">
-      <publishTime>10/16/2014 11:52:14</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
-      <publishTime>10/16/2014 11:52:14</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
+    </File>
+    <File Include="Views/Post/Create.cshtml">
+      <publishTime>11/19/2014 19:29:26</publishTime>
+    </File>
+    <File Include="Views/Post/Delete.cshtml">
+      <publishTime>11/15/2014 12:53:51</publishTime>
+    </File>
+    <File Include="Views/Post/Details.cshtml">
+      <publishTime>11/21/2014 10:52:56</publishTime>
+    </File>
+    <File Include="Views/Post/Edit.cshtml">
+      <publishTime>11/20/2014 17:23:39</publishTime>
+    </File>
+    <File Include="Views/Post/Index.cshtml">
+      <publishTime>11/20/2014 23:56:12</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
-      <publishTime>10/16/2014 11:52:10</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Shared/Lockout.cshtml">
-      <publishTime>10/16/2014 11:52:14</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>10/19/2014 12:12:04</publishTime>
+      <publishTime>11/21/2014 00:37:51</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
-      <publishTime>10/16/2014 11:52:14</publishTime>
+      <publishTime>11/20/2014 20:06:01</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>10/17/2014 12:01:38</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
-      <publishTime>10/16/2014 11:51:22</publishTime>
+      <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/18/2014 17:24:56</publishTime>
+      <publishTime>11/21/2014 11:28:15</publishTime>
     </File>
   </ItemGroup>
 </Project>

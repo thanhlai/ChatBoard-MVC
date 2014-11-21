@@ -102,6 +102,8 @@ namespace ChatBoard.Controllers
         {
             try
             {
+                post.UserId = User.Identity.GetUserId();
+                post.Owner = User.Identity.GetUserName();
                 db.Entry(post).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -197,6 +199,18 @@ namespace ChatBoard.Controllers
                 return File(avatar, "image/jpg");
             else
                 return File("/Content/Images/default_avatar1.png", "image/jpg");
+        }
+
+        public ActionResult ShowUserAvatar(string id)
+        {
+            var userAvatar = from user in db.Users
+                             where user.Id == id
+                             select user.Avatar;
+            byte[] avatar = userAvatar.FirstOrDefault();
+            if (avatar != null)
+                return File(avatar, "image/jpg");
+            else
+                return File("/Content/Images/default_avatar2.png", "image/jpg");    // anonymous
         }
     }
 }

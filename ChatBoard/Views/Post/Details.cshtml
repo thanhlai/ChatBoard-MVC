@@ -69,55 +69,55 @@
         <script src="~/Scripts/emo.js"></script>
         <!--SignalR script to update the chat page and send messages.-->
         <script>
-            $(function () {
-                // Reference the auto-generated proxy for the hub.
-                var chat = $.connection.chatHub;
-                var username = "@(User.Identity.GetUserName())";
-                // Create a function that the hub can call back to display messages.
-                chat.client.addNewMessageToPage = function (username, message) {
-                    // Add the message to the page.
-                    var avatar = "/Content/Images/default_avatar2.png";
-                    //Interpret smileys
-                    message = InterpretMessage(message);
-                    $('#discussion').append('<li class="left clearfix">'
-                    + '<span class="chat-img pull-left">'
-                    + '<img src=' + avatar + ' width="50" height="50" alt="User Avatar" class="img-thumbnail" />'
-                    + '</span>'
-                    + '<div class="chat-body clearfix">'
-                    + '<div class="header">'
-                    + '<strong class="primary-font">' + username + '</strong>'
-                    + '</div>'
-                    + '<p>' + message + '</p>'
-                    + '</div>'
-                    + '</li>').each(function () { scrollChat(); });
-                };
-                // Set initial focus to message input box.
-                $('‪#‎message‬').focus();
-                // Start the connection.
-                $.connection.hub.start().done(function () {
-                    $('#sendmessage').click(function () {
-                        // Call the Send method on the hub.
-                        if ($('#message').val().trim() != '') {
-                            chat.server.send(username, $('#message').val());
-                            // Clear text box and reset focus for next comment.
-                            $('#message').val('').focus();
-                        }
-                    });
-                    document.onkeypress = function (e) {
-                        if (e.keyCode == 13) {
-                            if ($('#message').val().trim() != '') {
-                                chat.server.send(username, $('#message').val());
-                                $('#message').val('').focus();
-                            }
-                        }
-                    }
-                });
-                function scrollChat() {
-                    var buklau = $("#chat-panel-body");
-                    var discussion = $("#discussion");
-                    buklau.scrollTop(discussion[0].scrollHeight);
+    $(function () {
+        // Reference the auto-generated proxy for the hub.
+        var chat = $.connection.chatHub;
+        var username = "@(User.Identity.GetUserName())";
+        var avatar = "<img class='img-thumbnail pull-left' src='" + '@Url.Action("ShowUserAvatar", "Post", new { id = User.Identity.GetUserId() })' + "' width='50' height='50' alt='User Avatar' />";
+        // Create a function that the hub can call back to display messages.
+        chat.client.addNewMessageToPage = function (username, message) {
+            // Add the message to the page.
+            //Interpret smileys
+            message = InterpretMessage(message);
+            $('#discussion').append('<li class="left clearfix">'
+            + '<span class="chat-img pull-left">'
+            + avatar
+            + '</span>'
+            + '<div class="chat-body clearfix">'
+            + '<div class="header">'
+            + '<strong class="primary-font">' + username + '</strong>'
+            + '</div>'
+            + '<p>' + message + '</p>'
+            + '</div>'
+            + '</li>').each(function () { scrollChat(); });
+        };
+        // Set initial focus to message input box.
+        $('‪#‎message‬').focus();
+        // Start the connection.
+        $.connection.hub.start().done(function () {
+            $('#sendmessage').click(function () {
+                // Call the Send method on the hub.
+                if ($('#message').val().trim() != '') {
+                    chat.server.send(username, $('#message').val());
+                    // Clear text box and reset focus for next comment.
+                    $('#message').val('').focus();
                 }
             });
+            document.onkeypress = function (e) {
+                if (e.keyCode == 13) {
+                    if ($('#message').val().trim() != '') {
+                        chat.server.send(username, $('#message').val());
+                        $('#message').val('').focus();
+                    }
+                }
+            }
+        });
+        function scrollChat() {
+            var buklau = $("#chat-panel-body");
+            var discussion = $("#discussion");
+            buklau.scrollTop(discussion[0].scrollHeight);
+        }
+    });
         </script>
     }
 }
@@ -141,6 +141,7 @@ else
                 chat.client.addNewMessageToPage = function (username, message) {
                     // Add the message to the page.
                     var avatar = "/Content/Images/default_avatar2.png";
+                    message = InterpretMessage(message);
                     $('#discussion').append('<li class="left clearfix">'
                     + '<span class="chat-img pull-left">'
                     + '<img src=' + avatar + ' width="50" height="50" alt="User Avatar" class="img-thumbnail" />'
