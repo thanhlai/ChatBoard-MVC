@@ -3,59 +3,49 @@
 @{
     ViewBag.Title = "Edit";
 }
+<div class="container margin-top-a-bit">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                @using (Html.BeginForm("Edit", "Post", FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <fieldset>
+                        <legend class="text-center">Edit this post - @Model.Title</legend>
+                        <!-- Title input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="name">Title:</label>
+                            <div class="col-md-9">
+                                <input id="Title" name="Title" type="text" placeholder="Title" class="form-control" value="@Model.Title">
+                            </div>
+                        </div>
 
-<h2>Edit</h2>
+                        <!-- Tag input -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="name">Tag:</label>
+                            <div class="col-md-9">
+                                <input id="tag" name="tag" type="text" placeholder="Separate tags with comma" class="form-control" value="@Model.Tags">
+                            </div>
+                        </div>
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Post</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.Id)
+                        <!-- Message body -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="message">Content: </label>
+                            <div class="col-md-9">
+                                <textarea class="form-control" style="overflow:auto;resize:none" id="Content" name="Content" placeholder="Please enter your content here..." rows="8">@Model.Content</textarea>
+                            </div>
+                        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.DateCreated, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DateCreated, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DateCreated, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Content, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Content, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.UserId, "UserId", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.UserId, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UserId, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                        <!-- Form actions -->
+                        <div class="form-group">
+                            <div class="col-md-4 pull-left">
+                                <button type="submit" class="btn btn-sm btn-success">Submit</button>
+                                <input type="button" data-original-title="Back to Home" data-toggle="tooltip" class="btn btn-sm btn-warning" value="Back to Home" onclick="location.href='@Url.Action("Index", "Post")'" />
+                            </div>
+                        </div>
+                    </fieldset>
+                }
             </div>
         </div>
     </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
 </div>

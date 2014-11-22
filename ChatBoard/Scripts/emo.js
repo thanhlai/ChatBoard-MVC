@@ -6,13 +6,19 @@
     message = message.replace("<13>", "<img src=\"/Content/Smiles/smiles13.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<14>", "<img src=\"/Content/Smiles/smiles14.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<16>", "<img src=\"/Content/Smiles/smiles16.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
+    message = message.replace("<17>", "<img src=\"/Content/Smiles/smiles17.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<18>", "<img src=\"/Content/Smiles/smiles18.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<19>", "<img src=\"/Content/Smiles/smiles19.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
+    message = message.replace("<20>", "<img src=\"/Content/Smiles/smiles20.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<21>", "<img src=\"/Content/Smiles/smiles21.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<22>", "<img src=\"/Content/Smiles/smiles22.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
+    message = message.replace("<23>", "<img src=\"/Content/Smiles/smiles23.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
+    message = message.replace("<24>", "<img src=\"/Content/Smiles/smiles24.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<25>", "<img src=\"/Content/Smiles/smiles25.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
+    message = message.replace("<26>", "<img src=\"/Content/Smiles/smiles26.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<27>", "<img src=\"/Content/Smiles/smiles27.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<28>", "<img src=\"/Content/Smiles/smiles28.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
+    message = message.replace("<29>", "<img src=\"/Content/Smiles/smiles29.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<30>", "<img src=\"/Content/Smiles/smiles30.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<31>", "<img src=\"/Content/Smiles/smiles31.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<32>", "<img src=\"/Content/Smiles/smiles32.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
@@ -21,6 +27,7 @@
     message = message.replace("<35>", "<img src=\"/Content/Smiles/smiles35.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<36>", "<img src=\"/Content/Smiles/smiles36.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<37>", "<img src=\"/Content/Smiles/smiles37.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
+    message = message.replace("<38>", "<img src=\"/Content/Smiles/smiles38.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<39>", "<img src=\"/Content/Smiles/smiles39.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<40>", "<img src=\"/Content/Smiles/smiles40.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
     message = message.replace("<41>", "<img src=\"/Content/Smiles/smiles41.png\" class=\"smileys\" width=\"36\" height=\"36\" />");
