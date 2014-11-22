@@ -33,9 +33,6 @@ namespace ChatBoard
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Post", action = "Index", id = UrlParameter.Optional }
             );
-
-
-
         }
     }
 }

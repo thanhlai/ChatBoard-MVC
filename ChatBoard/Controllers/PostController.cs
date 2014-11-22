@@ -68,6 +68,7 @@ namespace ChatBoard.Controllers
             post.UserId = User.Identity.GetUserId();
             post.Owner = User.Identity.GetUserName();
             post.DateCreated = DateTime.Now;
+            post.Views = 0;
             db.Posts.Add(post);
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -179,6 +180,14 @@ namespace ChatBoard.Controllers
             // if the user is the owner of the post
             ViewBag.IsOwner = (User.Identity.GetUserName() == ownerUserName);
             
+            // Increment number of hits (views)
+            Post p =    (from post in db.Posts
+                        where post.Id == id.Value
+                        select post).Single();
+            p.Views++;
+            db.Entry(p).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+
             return View(db.Posts.Find(id));
         }
 
@@ -203,6 +212,9 @@ namespace ChatBoard.Controllers
 
         public ActionResult ShowUserAvatar(string id)
         {
+            if (id.Equals("Anonymous"))
+                return File("/Content/Images/default_avatar2.png", "image/jpg");    // anonymous
+
             var userAvatar = from user in db.Users
                              where user.Id == id
                              select user.Avatar;

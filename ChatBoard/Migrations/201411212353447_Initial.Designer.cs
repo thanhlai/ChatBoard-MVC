@@ -13,12 +13,12 @@ namespace ChatBoard.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201411200248255_Initial"; }
+            get { return "201411212353447_Initial"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return Resources.GetString("Source"); }
+            get { return null; }
         }
         
         string IMigrationMetadata.Target

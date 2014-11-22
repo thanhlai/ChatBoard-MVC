@@ -75,7 +75,7 @@
         var username = "@(User.Identity.GetUserName())";
         var avatar = "<img class='img-thumbnail pull-left' src='" + '@Url.Action("ShowUserAvatar", "Post", new { id = User.Identity.GetUserId() })' + "' width='50' height='50' alt='User Avatar' />";
         // Create a function that the hub can call back to display messages.
-        chat.client.addNewMessageToPage = function (username, message) {
+        chat.client.addNewMessageToPage = function (username, message, avatar) {
             // Add the message to the page.
             //Interpret smileys
             message = InterpretMessage(message);
@@ -98,7 +98,7 @@
             $('#sendmessage').click(function () {
                 // Call the Send method on the hub.
                 if ($('#message').val().trim() != '') {
-                    chat.server.send(username, $('#message').val());
+                    chat.server.send(username, $('#message').val(), avatar);
                     // Clear text box and reset focus for next comment.
                     $('#message').val('').focus();
                 }
@@ -106,7 +106,7 @@
             document.onkeypress = function (e) {
                 if (e.keyCode == 13) {
                     if ($('#message').val().trim() != '') {
-                        chat.server.send(username, $('#message').val());
+                        chat.server.send(username, $('#message').val(), avatar);
                         $('#message').val('').focus();
                     }
                 }
@@ -137,14 +137,14 @@ else
                 // Reference the auto-generated proxy for the hub.
                 var chat = $.connection.chatHub;
                 var username = 'Anonymous';
+                var avatar = "<img class='img-thumbnail pull-left' src='" + '@Url.Action("ShowUserAvatar", "Post", new { id = "Anonymous" })' + "' width='50' height='50' alt='User Avatar' />";
                 // Create a function that the hub can call back to display messages.
-                chat.client.addNewMessageToPage = function (username, message) {
+                chat.client.addNewMessageToPage = function (username, message, avatar) {
                     // Add the message to the page.
-                    var avatar = "/Content/Images/default_avatar2.png";
                     message = InterpretMessage(message);
                     $('#discussion').append('<li class="left clearfix">'
                     + '<span class="chat-img pull-left">'
-                    + '<img src=' + avatar + ' width="50" height="50" alt="User Avatar" class="img-thumbnail" />'
+                    + avatar
                     + '</span>'
                     + '<div class="chat-body clearfix">'
                     + '<div class="header">'
@@ -161,7 +161,7 @@ else
                     $('#sendmessage').click(function () {
                         // Call the Send method on the hub.
                         if ($('#message').val().trim() != '') {
-                            chat.server.send(username, $('#message').val());
+                            chat.server.send(username, $('#message').val(), avatar);
                             // Clear text box and reset focus for next comment.
                             $('#message').val('').focus();
                         }
@@ -169,7 +169,7 @@ else
                     document.onkeypress = function (e) {
                         if (e.keyCode == 13) {
                             if ($('#message').val().trim() != '') {
-                                chat.server.send(username, $('#message').val());
+                                chat.server.send(username, $('#message').val(), avatar);
                                 $('#message').val('').focus();
                             }
                         }
