@@ -103,6 +103,7 @@ namespace ChatBoard.Controllers
         {
             try
             {
+                post.DateCreated = DateTime.Now;
                 post.UserId = User.Identity.GetUserId();
                 post.Owner = User.Identity.GetUserName();
                 db.Entry(post).State = System.Data.Entity.EntityState.Modified;

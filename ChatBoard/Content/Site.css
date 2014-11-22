@@ -1,15 +1,9 @@
-﻿html {
-    height: 100%;
-    overflow: scroll;
-}
-
-body {
+﻿body {
     padding-top: 65px;
     padding-bottom: 20px;
     font-family:  "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
     height: 100%;
     overflow: scroll;
-    -webkit-overflow-scrolling: touch;
     font-size: 14px;
 }
 h2, .h2 {
@@ -55,13 +49,11 @@ h4, .h4 {
 	font-size: 16px;
 	line-height: 16px;
 }
-#registerLink, #loginLink, #logoutForm {
+#registerLink, #loginLink, #logoutForm, #logoffLink, #welcomeLink {
 	width: auto;
 	line-height: 13px;
 	font-size: 14px;
 	height: 30px;
-	margin: 13px 5px 0;
-	border: 1px #DDD solid;
 }
 
 .navbar.navbar-inverse.navbar-fixed-top input {
@@ -109,6 +101,22 @@ footer {
     margin-top: 30px;
     text-align: center;
 }
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+footer, .push {
+    height: 4em;
+}
+
 
  /* Chat View CSS */
 header {
@@ -492,12 +500,12 @@ body {
         margin: 0;
     }
 
-    #registerLink, #loginLink, #logoutForm {
+    #registerLink, #loginLink, #logoutForm, #logoffLink, #welcomeLink {
         width: 100%;
         border: none;
     }
 
-    #registerLink:hover, #loginLink:hover, #logoutForm:hover {
+    #registerLink:hover, #loginLink:hover, #logoutForm:hover, #logoffLink:hover, #welcomeLink:hover {
         background-color: #DDD;
     }
 }
