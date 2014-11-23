@@ -24,6 +24,7 @@ namespace ChatBoard.Models
         public string Content { get; set; }
         public string Tag { get; set; }
         public int Views { get; set; }
+        public int Loves { get; set; }
         public string Owner { get; set; }   // use for in-site search optimization
         [MaxLength(128), ForeignKey("ApplicationUser")]
         public virtual string UserId { get; set; }

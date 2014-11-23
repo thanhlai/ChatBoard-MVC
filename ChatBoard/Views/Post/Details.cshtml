@@ -17,6 +17,10 @@
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="@(Url.Action("Edit", "Post", new { id = Model.Id }))">Edit Post <i class="glyphicon glyphicon-pencil"></i></a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="@(Url.Action("Delete", "Post", new { id = Model.Id }))">Delete Post <i class="glyphicon glyphicon-remove"></i></a></li>
                         }
+                        else if (ViewBag.IsUserLoggedIn && !ViewBag.IsOwner)
+                        {
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="@(Url.Action("Love", "Post", new { id = Model.Id }))">Love This Post <i class="glyphicon glyphicon-heart"></i></a></li>
+                        }
                         <li role="presentation"><a role="menuitem" tabindex="-1" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Show/Hide Chat <i class="glyphicon glyphicon-sort"></i></a></li>
 
                         <li role="presentation" class="divider"></li>

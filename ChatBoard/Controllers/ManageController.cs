@@ -50,7 +50,7 @@ namespace ChatBoard.Controllers
 
             ApplicationUser Model = UserManager.FindById(User.Identity.GetUserId());
 
-            if (string.IsNullOrEmpty(model.UserName) || string.IsNullOrEmpty(model.FirstName) || string.IsNullOrEmpty(model.LastName) || string.IsNullOrEmpty(model.Email) || string.IsNullOrEmpty(model.PhoneNumber))
+            if (string.IsNullOrEmpty(model.UserName) || string.IsNullOrEmpty(model.FirstName) || string.IsNullOrEmpty(model.LastName) || string.IsNullOrEmpty(model.Email))
                 return View("Index",model);
 
             // Avatar upload validation
@@ -66,7 +66,8 @@ namespace ChatBoard.Controllers
             Model.FirstName = model.FirstName;
             Model.LastName = model.LastName;
             Model.Email = model.Email;
-            Model.PhoneNumber = model.PhoneNumber;
+            if (!string.IsNullOrEmpty(model.PhoneNumber))
+                Model.PhoneNumber = model.PhoneNumber;
             
 
             IdentityResult result = await UserManager.UpdateAsync(Model);

@@ -189,7 +189,7 @@ namespace ChatBoard.Controllers
             ViewBag.IsUserLoggedIn = (System.Web.HttpContext.Current.User.Identity.IsAuthenticated) && (System.Web.HttpContext.Current.User != null);
             // if the user is the owner of the post
             ViewBag.IsOwner = (User.Identity.GetUserName() == ownerUserName);
-            
+
             // Increment number of hits (views)
             Post p =    (from post in db.Posts
                         where post.Id == id.Value
@@ -233,6 +233,18 @@ namespace ChatBoard.Controllers
                 return File(avatar, "image/jpg");
             else
                 return File("/Content/Images/default_avatar1.png", "image/jpg");    // default avatar
+        }
+
+
+        public ActionResult Love(int? id)
+        {
+            Post p = (from post in db.Posts
+                      where post.Id == id.Value
+                      select post).Single();
+            p.Loves++;
+            db.Entry(p).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Details", "Post", new { id = id.Value });
         }
     }
 }
