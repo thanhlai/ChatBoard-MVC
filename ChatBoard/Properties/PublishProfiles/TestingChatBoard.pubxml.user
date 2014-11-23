@@ -17,10 +17,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/16/2014 20:58:20</publishTime>
     </File>
     <File Include="App_Data/ChatBoard.mdf">
-      <publishTime>11/21/2014 11:32:25</publishTime>
+      <publishTime>11/22/2014 13:04:44</publishTime>
     </File>
     <File Include="App_Data/ChatBoard_log.ldf">
-      <publishTime>11/21/2014 11:32:25</publishTime>
+      <publishTime>11/22/2014 13:04:44</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>11/14/2014 13:44:36</publishTime>
@@ -32,7 +32,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/21/2014 11:32:25</publishTime>
     </File>
     <File Include="bin/ChatBoard.dll">
-      <publishTime>11/21/2014 11:24:44</publishTime>
+      <publishTime>11/22/2014 13:04:44</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>11/14/2014 13:44:38</publishTime>
@@ -185,7 +185,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/14/2014 13:44:31</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>11/21/2014 00:41:48</publishTime>
+      <publishTime>11/21/2014 17:53:17</publishTime>
     </File>
     <File Include="Content/Smiles/smiles10.png">
       <publishTime>12/02/2008 08:19:46</publishTime>
@@ -401,7 +401,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/14/2014 13:44:31</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>11/14/2014 13:44:36</publishTime>
+      <publishTime>11/21/2014 16:04:56</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>11/14/2014 13:44:31</publishTime>
@@ -410,7 +410,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/14/2014 13:44:31</publishTime>
     </File>
     <File Include="Scripts/emo.js">
-      <publishTime>11/20/2014 16:45:55</publishTime>
+      <publishTime>11/21/2014 16:58:41</publishTime>
     </File>
     <File Include="Scripts/jquery-2.1.1.js">
       <publishTime>11/14/2014 13:44:31</publishTime>
@@ -467,7 +467,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
-      <publishTime>11/14/2014 13:44:32</publishTime>
+      <publishTime>11/22/2014 12:20:30</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginFailure.cshtml">
       <publishTime>11/14/2014 13:44:32</publishTime>
@@ -482,7 +482,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/21/2014 00:22:58</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>11/14/2014 13:44:32</publishTime>
+      <publishTime>11/22/2014 12:56:14</publishTime>
     </File>
     <File Include="Views/Account/ResetPassword.cshtml">
       <publishTime>11/14/2014 13:44:32</publishTime>
@@ -507,6 +507,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Views/Account/_SetPasswordPartial.cshtml">
       <publishTime>11/14/2014 13:44:32</publishTime>
+    </File>
+    <File Include="Views/Error/Index.cshtml">
+      <publishTime>11/21/2014 16:16:24</publishTime>
+    </File>
+    <File Include="Views/Error/NotFound.cshtml">
+      <publishTime>11/21/2014 16:14:28</publishTime>
     </File>
     <File Include="Views/Home/Chat.cshtml">
       <publishTime>10/24/2014 21:20:32</publishTime>
@@ -539,19 +545,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Post/Create.cshtml">
-      <publishTime>11/19/2014 19:29:26</publishTime>
+      <publishTime>11/21/2014 15:49:47</publishTime>
     </File>
     <File Include="Views/Post/Delete.cshtml">
       <publishTime>11/15/2014 12:53:51</publishTime>
     </File>
     <File Include="Views/Post/Details.cshtml">
-      <publishTime>11/21/2014 10:52:56</publishTime>
+      <publishTime>11/21/2014 18:14:10</publishTime>
     </File>
     <File Include="Views/Post/Edit.cshtml">
-      <publishTime>11/20/2014 17:23:39</publishTime>
+      <publishTime>11/21/2014 16:29:04</publishTime>
     </File>
     <File Include="Views/Post/Index.cshtml">
-      <publishTime>11/20/2014 23:56:12</publishTime>
+      <publishTime>11/21/2014 15:35:32</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>11/14/2014 13:44:32</publishTime>
@@ -560,10 +566,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/21/2014 00:37:51</publishTime>
+      <publishTime>11/21/2014 18:13:56</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
-      <publishTime>11/20/2014 20:06:01</publishTime>
+      <publishTime>11/21/2014 17:42:53</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>11/14/2014 13:44:32</publishTime>
@@ -572,7 +578,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/14/2014 13:44:32</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/21/2014 11:28:15</publishTime>
+      <publishTime>11/22/2014 12:12:29</publishTime>
     </File>
   </ItemGroup>
 </Project>

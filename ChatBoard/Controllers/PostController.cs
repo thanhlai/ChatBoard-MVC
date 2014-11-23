@@ -28,6 +28,8 @@ namespace ChatBoard.Controllers
                         select post;
             var postsByUserName = from post in db.Posts
                         select post;
+            var postsByTag = from post in db.Posts
+                        select post;
             if (!string.IsNullOrEmpty(searchString))
             {
                 postsByTopic = postsByTopic.Where(s => s.Title.Contains(searchString));   // search by topic
@@ -35,6 +37,13 @@ namespace ChatBoard.Controllers
                 {
                     // search by owner username
                     postsByUserName = postsByUserName.Where(s => s.Owner.Contains(searchString));
+
+                    //search by tag
+                    if (postsByUserName.Count() == 0)
+                    {
+                        postsByTag = postsByTag.Where(s => s.Tag.Contains(searchString));
+                        return View(postsByTag);
+                    }
                     return View(postsByUserName);
                 }
             }
@@ -223,7 +232,7 @@ namespace ChatBoard.Controllers
             if (avatar != null)
                 return File(avatar, "image/jpg");
             else
-                return File("/Content/Images/default_avatar2.png", "image/jpg");    // anonymous
+                return File("/Content/Images/default_avatar1.png", "image/jpg");    // default avatar
         }
     }
 }

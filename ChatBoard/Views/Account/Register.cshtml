@@ -9,9 +9,9 @@
             @using (Html.BeginForm("Register", "Account", FormMethod.Post))
             {
                 @Html.AntiForgeryToken()
-                @*@Html.ValidationSummary("", new { @class = "form-control text-danger" })*@
                 <h2>Please Sign Up <small>It's free and always will be.</small></h2>
                 <hr class="colorgraph">
+                @Html.ValidationSummary("", new { @class = "" })
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
                         <div class="form-group">

@@ -377,7 +377,7 @@ namespace ChatBoard.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser { Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email.Substring(0,model.Email.IndexOf('@')), Email = model.Email };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
