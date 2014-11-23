@@ -614,6 +614,5 @@ C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\bin\EntityFramework.SqlServer.xml
 C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\obj\Debug\ChatBoard.csprojResolveAssemblyReference.cache
 C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\obj\Debug\ChatBoard.dll
 C:\Users\Thanh\Desktop\ChatBoard\ChatBoard\obj\Debug\ChatBoard.pdb

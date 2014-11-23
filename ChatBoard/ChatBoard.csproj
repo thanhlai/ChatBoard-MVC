@@ -228,13 +228,19 @@
     <Content Include="Content\Smiles\smiles13.png" />
     <Content Include="Content\Smiles\smiles14.png" />
     <Content Include="Content\Smiles\smiles16.png" />
+    <Content Include="Content\Smiles\smiles17.png" />
     <Content Include="Content\Smiles\smiles18.png" />
     <Content Include="Content\Smiles\smiles19.png" />
+    <Content Include="Content\Smiles\smiles20.png" />
     <Content Include="Content\Smiles\smiles21.png" />
     <Content Include="Content\Smiles\smiles22.png" />
+    <Content Include="Content\Smiles\smiles23.png" />
+    <Content Include="Content\Smiles\smiles24.png" />
     <Content Include="Content\Smiles\smiles25.png" />
+    <Content Include="Content\Smiles\smiles26.png" />
     <Content Include="Content\Smiles\smiles27.png" />
     <Content Include="Content\Smiles\smiles28.png" />
+    <Content Include="Content\Smiles\smiles29.png" />
     <Content Include="Content\Smiles\smiles30.png" />
     <Content Include="Content\Smiles\smiles31.png" />
     <Content Include="Content\Smiles\smiles32.png" />
@@ -243,6 +249,7 @@
     <Content Include="Content\Smiles\smiles35.png" />
     <Content Include="Content\Smiles\smiles36.png" />
     <Content Include="Content\Smiles\smiles37.png" />
+    <Content Include="Content\Smiles\smiles38.png" />
     <Content Include="Content\Smiles\smiles39.png" />
     <Content Include="Content\Smiles\smiles40.png" />
     <Content Include="Content\Smiles\smiles41.png" />
@@ -321,7 +328,9 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
