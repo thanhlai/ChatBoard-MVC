@@ -7,7 +7,13 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ChatBoard.Models;
-
+/*
+ * @author: Team Virus
+ * @project: Chat Board
+ * @setID: 4D
+ * @courseID: COMP 4952
+ * @instructors: Mirela Gutica & Medhat Elmasry 
+ * **/
 namespace ChatBoard.Controllers
 {
     [Authorize]
@@ -36,6 +42,8 @@ namespace ChatBoard.Controllers
         }
         /// <summary>
         /// POST: /Manage/ChangeUserProfile
+        /// Validate user input
+        /// Insert user avatar into the db
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>

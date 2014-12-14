@@ -10,7 +10,13 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ChatBoard.Models;
 using System.Web.Security;
-
+/*
+ * @author: Team Virus
+ * @project: Chat Board
+ * @setID: 4D
+ * @courseID: COMP 4952
+ * @instructors: Mirela Gutica & Medhat Elmasry 
+ * **/
 namespace ChatBoard.Controllers
 {
     [Authorize]

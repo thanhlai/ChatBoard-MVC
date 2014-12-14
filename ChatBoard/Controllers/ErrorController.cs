@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+/*
+ * @author: Team Virus
+ * @project: Chat Board
+ * @setID: 4D
+ * @courseID: COMP 4952
+ * @instructors: Mirela Gutica & Medhat Elmasry 
+ * **/
 namespace ChatBoard.Controllers
 {
     public class ErrorController : Controller

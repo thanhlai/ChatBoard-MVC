@@ -9,7 +9,13 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Drawing;
 using System.IO;
-
+/*
+ * @author: Team Virus
+ * @project: Chat Board
+ * @setID: 4D
+ * @courseID: COMP 4952
+ * @instructors: Mirela Gutica & Medhat Elmasry 
+ * **/
 namespace ChatBoard.Controllers
 {
     public class PostController : Controller
@@ -20,8 +26,15 @@ namespace ChatBoard.Controllers
         //{
         //    return View(db.Posts.ToList());
         //}
-
+       
         // GET: Post - Search for posts
+        /// <summary>
+        /// Show all the available posts, built-in custom search - 
+        /// when the user enter the search string on the Search Box, this action controller
+        /// will return the appropriate posts associate with the search string provided.
+        /// </summary>
+        /// <param name="searchString"></param>
+        /// <returns></returns>
         public ActionResult Index(string searchString)
         {
             var postsByTopic = from post in db.Posts
@@ -55,6 +68,10 @@ namespace ChatBoard.Controllers
         }
 
         // GET: Create
+        /// <summary>
+        /// Return Create Post view if the user is authorized.
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Create()
         {
             if ((System.Web.HttpContext.Current.User.Identity.IsAuthenticated) && (System.Web.HttpContext.Current.User != null))
@@ -65,6 +82,11 @@ namespace ChatBoard.Controllers
                 return RedirectToAction("Index");
         }
         // POST: Create
+        /// <summary>
+        /// Receive Post attributes and save it into the db (Post table)
+        /// </summary>
+        /// <param name="post"></param>
+        /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Post post)
@@ -84,6 +106,12 @@ namespace ChatBoard.Controllers
         }
 
         // GET: Edit, same as Details
+        /// <summary>
+        /// Edit Post View is redirected if the logged in user is the post's owner
+        /// else, redirect to the post's detail
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Edit(int? id)
         {
             if (id == null || db == null)
@@ -93,7 +121,7 @@ namespace ChatBoard.Controllers
 
             string currentUserName = User.Identity.GetUserName();
 
-            //CHECK FOR POST'S OWNER HERE
+            //CHECK FOR POST'S OWNER
             var owner = from post in db.Posts
                         where post.Id == id.Value
                         select post.Owner;
@@ -107,6 +135,12 @@ namespace ChatBoard.Controllers
         }
 
         // POST: Edit
+        /// <summary>
+        /// Get Edit post attributes and update it in the db
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="post"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult Edit(int id, Post post)
         {
@@ -126,6 +160,12 @@ namespace ChatBoard.Controllers
         }
 
         // GET: Delete
+        /// <summary>
+        /// If the user is authorized and is post's owner, redirect to Delete view
+        /// else, redirect to the post's details view
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Delete(int? id)
         {
             if (id == null || db == null)
@@ -149,6 +189,13 @@ namespace ChatBoard.Controllers
         }
 
         // POST: Delete
+        /// <summary>
+        /// Remove the post from Post table
+        /// and redirect users to Index action
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="post"></param>
+        /// <returns></returns>
         [HttpPost]
         public ActionResult Delete(int id, Post post)
         {
@@ -167,6 +214,12 @@ namespace ChatBoard.Controllers
 
 
         // GET: Details
+        /// <summary>
+        /// Show post details, along with owner avatar,
+        /// increment views and store in the db
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Details(int? id)
         {
             if (id == null || db == null)
@@ -201,6 +254,11 @@ namespace ChatBoard.Controllers
             return View(db.Posts.Find(id));
         }
 
+        /// <summary>
+        /// Show owner avatar helper
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult ShowOwnerAvatar(int? id)
         {
             var owner = from post in db.Posts
@@ -220,6 +278,11 @@ namespace ChatBoard.Controllers
                 return File("/Content/Images/default_avatar1.png", "image/jpg");
         }
 
+        /// <summary>
+        /// Show login user avatar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult ShowUserAvatar(string id)
         {
             if (id.Equals("Anonymous"))
@@ -235,7 +298,11 @@ namespace ChatBoard.Controllers
                 return File("/Content/Images/default_avatar1.png", "image/jpg");    // default avatar
         }
 
-
+        /// <summary>
+        /// Increment love post number
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Love(int? id)
         {
             Post p = (from post in db.Posts

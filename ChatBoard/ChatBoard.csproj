@@ -304,6 +304,7 @@
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\FontAwesome.otf" />
     <None Include="Properties\PublishProfiles\chatboard.pubxml" />
+    <None Include="Properties\PublishProfiles\Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\TestingChatBoard.pubxml" />
     <None Include="Properties\PublishProfiles\ZIPChatBoard.pubxml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
